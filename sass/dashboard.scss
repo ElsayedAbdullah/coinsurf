@@ -1,0 +1,362 @@
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 991px)";
+$maxTab: "(max-width: 991px)";
+$betweentabdesk: "(min-width: 992px) and (max-width: 1200px)";
+$primaryColor: "#20244f";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*
+Media Query Manager
+--------------------
+0-600px      Phone
+600-900px    Tablet Portrait
+900-1200px   Tablet Landscape
+1200-1800px  Desktop
+1800+        Big Desktop
+
+$breakpoint argument choices:
+-----------------------------
+- phone
+- tab-port
+- tab-land
+- big-desktop
+1em == 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } // 600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } // 900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } // 1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } // 1800px
+  }
+}
+
+// Base
+html {
+  font-size: 62.5%; // 1rem == 10px; 10px/16px = 62.5%
+  /* 62.5% == 0.625*16px == 10px */
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem == 12px
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem == 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem == 8px
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #20244f;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+aside {
+  max-width: 40rem;
+  min-width: 27.5rem;
+  overflow: hidden;
+  position: relative;
+  padding: 0 2.5rem;
+  background: #20244f;
+  height: 100vh;
+  color: #fff;
+
+  .aside-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 7px;
+    &:hover,
+    &.active {
+      background: #3a3f73;
+      p {
+        color: #fff;
+      }
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 2rem;
+      line-height: 2.6rem;
+      color: rgba(#fff, 0.6);
+      margin-left: 1.5rem;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  .logo {
+    margin: 5rem 0 4rem;
+    text-align: center;
+    svg {
+      width: 17rem;
+      height: auto;
+    }
+  }
+
+  .social-icons {
+    li {
+      svg {
+        g,
+        path {
+          transition: 0.2s;
+        }
+      }
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+      &:hover {
+        svg {
+          g,
+          path {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.dashboard-main {
+  flex: 1;
+  padding-bottom: 5rem;
+  overflow: hidden;
+  background: #f0f0f7;
+}
+
+.dashboard-container {
+  padding: 0 3rem;
+  @media (min-width: 160rem) {
+    max-width: 152rem;
+    margin: auto;
+    padding: 0 4rem;
+  }
+}
+
+.top-overview {
+  color: rgba(#20244f, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 4rem 3rem;
+  .balance {
+    position: relative;
+    margin-right: 5rem;
+    padding-right: 5rem;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 8rem;
+      display: inline-block;
+      background: #dbdbe4;
+      border-radius: 1px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .today {
+    margin-right: 5rem;
+  }
+  p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  div > span {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5.5rem;
+  }
+  h3 {
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: 6rem;
+    color: #20244f;
+  }
+  .request-payout {
+    a {
+      display: flex;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.6rem;
+      padding: 1.6rem 2.4rem;
+      span:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.overview-body {
+  .devices {
+    padding: 3rem;
+    background: #ffffff;
+    border: 1px solid #dddde1;
+    border-radius: 1rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      button {
+        all: unset;
+        cursor: pointer;
+      }
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      color: #20244f;
+    }
+
+    li {
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:not(:last-of-type) {
+        border-bottom: 2px solid rgba(219, 219, 228, 0.542188);
+      }
+      .left {
+        display: flex;
+        align-items: center;
+        span {
+          font-weight: 500;
+          font-size: 1.8rem;
+          line-height: 2.1rem;
+          color: #20244f;
+          opacity: 0.75;
+        }
+      }
+      .date {
+        font-size: 18px;
+        line-height: 21px;
+        color: rgba(#20244f, 0.5);
+      }
+    }
+
+    .add-device {
+      font-weight: 700;
+      font-size: 1.7rem;
+      line-height: 21px;
+      color: #141735;
+      opacity: 0.6;
+      background: #ffffff;
+      border: 1px solid #dddde1;
+      border-radius: 0.6rem;
+      display: block;
+      margin-top: 2rem;
+      width: 100%;
+      padding: 1.2rem;
+      text-align: center;
+    }
+  }
+
+  .referral-code {
+    background: #4263f6;
+    border: 1.13333px solid rgba(186, 189, 222, 0.348027);
+    border-radius: 10px;
+    padding: 3rem;
+    margin-top: 3rem;
+    p {
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .share-code {
+      p {
+        color: #ffffff;
+      }
+      .code {
+        font-weight: 900;
+        font-size: 3.5rem;
+        line-height: 4rem;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+    }
+    .send-invite {
+      p {
+        color: rgba(#fff, 0.5);
+        text-align: right;
+      }
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        input ,button {
+          background: #ffffff;
+          border-radius: 6px;
+          padding: 1.3rem 2rem;
+          color: #20244f;
+          font-weight: 500;
+          font-size: 1.7rem;
+          line-height: 2rem;
+          border: 0;
+          min-height: 5rem;
+        }
+        input {
+          &::placeholder {
+            color: rgba(#20244f, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-btn {
+  background: #4263f6;
+  border-radius: 7.2px;
+}

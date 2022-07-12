@@ -8,10 +8,12 @@ $(function () {
     $(".apps-download > div").hide();
     $($(this).data("content")).fadeIn();
   });
+
+  $('button.menu-toggle').on('click', function() {
+    $(this).toggleClass('is-active');
+    $('body').toggleClass('overlay')
+  });
 });
 
 
-$('button.menu-toggle').on('click', function() {
-  $(this).toggleClass('is-active');
-  $('body').toggleClass('overlay')
-});
+

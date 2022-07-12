@@ -1,0 +1,314 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*
+Media Query Manager
+--------------------
+0-600px      Phone
+600-900px    Tablet Portrait
+900-1200px   Tablet Landscape
+1200-1800px  Desktop
+1800+        Big Desktop
+
+$breakpoint argument choices:
+-----------------------------
+- phone
+- tab-port
+- tab-land
+- big-desktop
+1em == 16px
+*/
+html {
+  font-size: 62.5%;
+  /* 62.5% == 0.625*16px == 10px */
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #20244f;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+aside {
+  max-width: 40rem;
+  min-width: 27.5rem;
+  overflow: hidden;
+  position: relative;
+  padding: 0 2.5rem;
+  background: #20244f;
+  height: 100vh;
+  color: #fff;
+}
+aside .aside-item {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 7px;
+}
+aside .aside-item:hover, aside .aside-item.active {
+  background: #3a3f73;
+}
+aside .aside-item:hover p, aside .aside-item.active p {
+  color: #fff;
+}
+aside .aside-item:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+aside .aside-item p {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 1.5rem;
+  transition: 0.2s ease-in-out;
+}
+aside .logo {
+  margin: 5rem 0 4rem;
+  text-align: center;
+}
+aside .logo svg {
+  width: 17rem;
+  height: auto;
+}
+aside .social-icons li svg g,
+aside .social-icons li svg path {
+  transition: 0.2s;
+}
+aside .social-icons li:not(:last-of-type) {
+  margin-right: 2rem;
+}
+aside .social-icons li:hover svg g,
+aside .social-icons li:hover svg path {
+  opacity: 1;
+}
+
+@media (min-width: 992px) {
+  .dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+.dashboard-main {
+  flex: 1;
+  padding-bottom: 5rem;
+  overflow: hidden;
+  background: #f0f0f7;
+}
+
+.dashboard-container {
+  padding: 0 3rem;
+}
+@media (min-width: 160rem) {
+  .dashboard-container {
+    max-width: 152rem;
+    margin: auto;
+    padding: 0 4rem;
+  }
+}
+
+.top-overview {
+  color: rgba(32, 36, 79, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 4rem 3rem;
+}
+.top-overview .balance {
+  position: relative;
+  margin-right: 5rem;
+  padding-right: 5rem;
+}
+.top-overview .balance:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 8rem;
+  display: inline-block;
+  background: #dbdbe4;
+  border-radius: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.top-overview .today {
+  margin-right: 5rem;
+}
+.top-overview p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.top-overview div > span {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 5.5rem;
+}
+.top-overview h3 {
+  font-weight: 900;
+  font-size: 5rem;
+  line-height: 6rem;
+  color: #20244f;
+}
+.top-overview .request-payout a {
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding: 1.6rem 2.4rem;
+}
+.top-overview .request-payout a span:first-child {
+  margin-right: 1rem;
+}
+
+.overview-body .devices {
+  padding: 3rem;
+  background: #ffffff;
+  border: 1px solid #dddde1;
+  border-radius: 1rem;
+}
+.overview-body .devices .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.overview-body .devices .title button {
+  all: unset;
+  cursor: pointer;
+}
+.overview-body .devices h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #20244f;
+}
+.overview-body .devices li {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.overview-body .devices li:not(:last-of-type) {
+  border-bottom: 2px solid rgba(219, 219, 228, 0.542188);
+}
+.overview-body .devices li .left {
+  display: flex;
+  align-items: center;
+}
+.overview-body .devices li .left span {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: #20244f;
+  opacity: 0.75;
+}
+.overview-body .devices li .date {
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(32, 36, 79, 0.5);
+}
+.overview-body .devices .add-device {
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 21px;
+  color: #141735;
+  opacity: 0.6;
+  background: #ffffff;
+  border: 1px solid #dddde1;
+  border-radius: 0.6rem;
+  display: block;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1.2rem;
+  text-align: center;
+}
+.overview-body .referral-code {
+  background: #4263f6;
+  border: 1.13333px solid rgba(186, 189, 222, 0.348027);
+  border-radius: 10px;
+  padding: 3rem;
+  margin-top: 3rem;
+}
+.overview-body .referral-code p {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.overview-body .referral-code .share-code p {
+  color: #ffffff;
+}
+.overview-body .referral-code .share-code .code {
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.overview-body .referral-code .send-invite p {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: right;
+}
+.overview-body .referral-code .send-invite form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.overview-body .referral-code .send-invite form input, .overview-body .referral-code .send-invite form button {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 1.3rem 2rem;
+  color: #20244f;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  border: 0;
+  min-height: 5rem;
+}
+.overview-body .referral-code .send-invite form input::-moz-placeholder {
+  color: rgba(32, 36, 79, 0.5);
+}
+.overview-body .referral-code .send-invite form input:-ms-input-placeholder {
+  color: rgba(32, 36, 79, 0.5);
+}
+.overview-body .referral-code .send-invite form input::placeholder {
+  color: rgba(32, 36, 79, 0.5);
+}
+
+.main-btn {
+  background: #4263f6;
+  border-radius: 7.2px;
+}/*# sourceMappingURL=dashboard.css.map */

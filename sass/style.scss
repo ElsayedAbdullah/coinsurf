@@ -2,6 +2,7 @@ $mobile: "(max-width: 767px)";
 $tablet: "(min-width: 768px) and (max-width: 991px)";
 $maxTab: "(max-width: 991px)";
 $betweentabdesk: "(min-width: 992px) and (max-width: 1200px)";
+$primaryColor: "#20244f";
 
 * {
   padding: 0;
@@ -577,28 +578,28 @@ button {
       border-radius: 6px;
       height: 12px;
 
-      .progress-bar {
+      input {
+        width: 100%;
+        -webkit-appearance: none;
+        background: rgba(32, 36, 79, 0.23);
+        background-image: linear-gradient(#4263F6, #4263F6);
+        background-size: 34% 100%;
+        background-repeat: no-repeat;
+        flex: 1;
         border-radius: 6px;
       }
+
     }
 
     .traffic-values {
-      padding: 0 20px;
-
-      @media #{$mobile} {
-        padding: 0 10px;
-      }
-
       span {
         display: inline-block;
-        padding-right: 20px;
         font-weight: 700;
         font-size: 18px;
         line-height: 21px;
         color: rgba(#20244f, 0.5);
 
         @media #{$mobile} {
-          padding-right: 10px;
           font-size: 12px;
         }
 
