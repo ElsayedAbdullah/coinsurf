@@ -63,6 +63,7 @@ h5,
 h6 {
   font-weight: 700;
   color: #20244f;
+  line-height: 140%;
   margin: 0;
 }
 
@@ -84,6 +85,46 @@ h6 {
   border: 0;
 }
 
+.download-btns a {
+  background: #ffffff;
+  border-radius: 7px;
+  padding: 1.2rem 1.6rem;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #20244f;
+  text-decoration: none;
+  transition: 0.2s;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .download-btns a {
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+}
+.download-btns a:hover {
+  background: #bebcde;
+}
+@media (max-width: 767px) {
+  .download-btns a {
+    display: block;
+  }
+}
+.download-btns a:not(:last-child) {
+  margin-right: 1.5rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .download-btns a:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .download-btns a:not(:last-child) {
+    margin: 0 0 1.5rem 0;
+  }
+}
+
 .main-btn:hover {
   background: #0b34e9;
 }
@@ -92,9 +133,16 @@ h6 {
   background: #8399f9;
 }
 
+.box-style {
+  background: #ffffff;
+  border: 1px solid #dddde1;
+  border-radius: 1rem;
+}
+
 p {
   margin-bottom: 0;
   color: rgba(32, 36, 79, 0.5);
+  line-height: 160%;
 }
 
 aside {
@@ -169,7 +217,7 @@ aside .social-icons li:hover svg path {
 }
 @media (min-width: 1600px) {
   .dashboard-main .dashboard-container {
-    max-width: 1520px;
+    max-width: 1600px;
     margin: auto;
   }
 }
@@ -317,12 +365,12 @@ aside .social-icons li:hover svg path {
 }
 
 .overview-info {
-  transition: 0.1s;
+  transition: 0.2s;
 }
 .overview-info.sticky {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: -1px;
   background: #f0f0f7;
   box-shadow: 0px 1.6rem 4.8rem -1rem rgba(126, 126, 157, 0.51);
   z-index: 5;
@@ -477,69 +525,6 @@ aside .social-icons li:hover svg path {
 .overview-body .devices .add-device:hover {
   background: #d1d4e0;
 }
-.overview-body .modal-content {
-  background: #4263f6;
-  border: 1px solid rgba(186, 189, 222, 0.348027);
-  border-radius: 1rem;
-  border: 0;
-}
-.overview-body .modal-body {
-  padding: 2.4rem;
-}
-.overview-body .modal-body img {
-  margin-bottom: 2.4rem;
-}
-.overview-body .modal-body h3 {
-  font-size: 2rem;
-  line-height: 2.3rem;
-  color: #ffffff;
-}
-.overview-body .modal-body p {
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 2rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 1rem 0 3.2rem;
-}
-.overview-body .modal-body .btns a {
-  background: #ffffff;
-  border-radius: 7px;
-  padding: 1.2rem 1.6rem;
-  display: inline-block;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 2rem;
-  color: #20244f;
-  text-decoration: none;
-  transition: 0.2s;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .overview-body .modal-body .btns a {
-    padding: 1rem;
-    font-size: 1.4rem;
-  }
-}
-.overview-body .modal-body .btns a:hover {
-  background: #bebcde;
-}
-@media (max-width: 767px) {
-  .overview-body .modal-body .btns a {
-    display: block;
-  }
-}
-.overview-body .modal-body .btns a:not(:last-child) {
-  margin-right: 1.5rem;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .overview-body .modal-body .btns a:not(:last-child) {
-    margin-right: 5px;
-  }
-}
-@media (max-width: 767px) {
-  .overview-body .modal-body .btns a:not(:last-child) {
-    margin: 0 0 1.5rem 0;
-  }
-}
 .overview-body .referral-code {
   background: #4263f6;
   border: 1px solid rgba(186, 189, 222, 0.348027);
@@ -689,11 +674,6 @@ aside .social-icons li:hover svg path {
   padding: 1.6rem 3.2rem;
   font-size: 1.8rem;
 }
-.profile .box-style {
-  background: #ffffff;
-  border: 1px solid #dddde1;
-  border-radius: 1rem;
-}
 .profile .change-password {
   padding: 2.4rem 3.2rem;
   display: none;
@@ -822,4 +802,494 @@ aside .social-icons li:hover svg path {
   font-size: 1.8rem;
   padding: 1.2rem 2rem;
   min-width: 10rem;
+}
+
+.download-apps h2 {
+  font-size: 3.6rem;
+  margin-bottom: 4rem;
+}
+.download-apps .download-box {
+  background: #4263f6;
+  border: 1px solid rgba(186, 189, 222, 0.348027);
+  border-radius: 10px;
+  padding: 3rem 4rem;
+}
+.download-apps .download-box h3 {
+  font-size: 3rem;
+  color: #fff;
+}
+.download-apps .download-box p {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #ffffff;
+  opacity: 0.49;
+  margin: 2rem 0 3rem;
+}
+.download-apps .app-tutorials {
+  margin-top: 3.5rem;
+}
+.download-apps .app-tutorials .app-tutorial {
+  margin-top: 4rem;
+  position: relative;
+  z-index: 2;
+}
+.download-apps .app-tutorials .app-name {
+  font-weight: 500;
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  border-radius: 1rem 1rem 0 0;
+  color: #20244f;
+  opacity: 0.62;
+  background: linear-gradient(180deg, #ffffff 15.75%, #ebebf1 54.32%);
+  border: 1px solid #c7c8cd;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: -4.5rem;
+  left: 0;
+  z-index: 1;
+  padding-top: 1rem;
+  text-align: center;
+}
+.download-apps .app-tutorials .app-body {
+  padding: 2.5rem;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-radius: 1rem;
+}
+.download-apps .app-tutorials .app-body .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.download-apps .app-tutorials .app-body .title .version {
+  background: #20244f;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 7px 10px;
+}
+.download-apps .app-tutorials .app-body .title .version.disabled {
+  background: rgba(32, 36, 79, 0.132694);
+  color: #878787;
+}
+.download-apps .app-tutorials .app-body .title h4 {
+  font-size: 2.4rem;
+}
+.download-apps .app-tutorials .app-body .title .date {
+  font-size: 1.8rem;
+}
+.download-apps .app-tutorials .app-body .desc p {
+  color: rgba(32, 36, 79, 0.6);
+}
+.download-apps .app-tutorials .app-body .desc ul {
+  margin-top: 1rem;
+}
+.download-apps .app-tutorials .app-body .desc ul li {
+  color: rgba(32, 36, 79, 0.6);
+}
+.download-apps .app-tutorials .read-more {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #4263f6;
+  cursor: pointer;
+  text-align: right;
+  display: block;
+  margin-top: 1rem;
+  transition: 0.2s;
+}
+.download-apps .app-tutorials .read-more:hover {
+  color: #4752d4;
+  text-decoration: underline;
+}
+
+.device-management .manage-devices {
+  margin-bottom: 3.5rem;
+}
+.device-management .manage-devices h2 {
+  font-size: 3.6rem;
+}
+.device-management .manage-devices button {
+  padding: 0 3.4rem;
+  line-height: 5.6rem;
+}
+.device-management .devices {
+  padding: 1rem 3rem;
+}
+.device-management .devices .device {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+.device-management .devices .device:not(:last-of-type) {
+  border-bottom: 1px solid rgba(219, 219, 228, 0.542188);
+}
+.device-management .devices .device-name {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.device-management .devices .device-name .icon {
+  margin-right: 1.5rem;
+}
+.device-management .devices .device-name p {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #20244f;
+  opacity: 0.75;
+}
+.device-management .devices .device-type {
+  width: 20%;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  color: #20244f;
+  opacity: 0.53;
+}
+.device-management .devices .device-active {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.device-management .devices .device-active p {
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 2rem;
+  letter-spacing: -0.3px;
+  color: #20244f;
+  opacity: 0.53;
+  margin-right: 0.8rem;
+}
+.device-management .devices .device-earn {
+  width: 40%;
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  text-align: right;
+  letter-spacing: -0.35px;
+  color: #20244f;
+}
+
+.transaction-history .transaction-info,
+.transaction-history .referral-info,
+.referrals-history .transaction-info,
+.referrals-history .referral-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.transaction-history .transaction-info p,
+.transaction-history .referral-info p,
+.referrals-history .transaction-info p,
+.referrals-history .referral-info p {
+  font-size: 2.6rem;
+  line-height: 3rem;
+}
+.transaction-history .transaction-info .amount,
+.transaction-history .referral-info .amount,
+.referrals-history .transaction-info .amount,
+.referrals-history .referral-info .amount {
+  font-weight: 900;
+  font-size: 6rem;
+  line-height: 7rem;
+  letter-spacing: -0.8px;
+  color: #20244f;
+}
+.transaction-history .transaction-info .amount .usd,
+.transaction-history .referral-info .amount .usd,
+.referrals-history .transaction-info .amount .usd,
+.referrals-history .referral-info .amount .usd {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.5rem;
+  letter-spacing: -0.65px;
+  color: #20244f;
+  opacity: 0.5;
+}
+.transaction-history .transaction-info .right,
+.transaction-history .referral-info .right,
+.referrals-history .transaction-info .right,
+.referrals-history .referral-info .right {
+  display: flex;
+  align-items: center;
+}
+.transaction-history .transaction-info .right p,
+.transaction-history .referral-info .right p,
+.referrals-history .transaction-info .right p,
+.referrals-history .referral-info .right p {
+  max-width: 17rem;
+  margin-right: 1.4rem;
+  text-align: right;
+}
+.transaction-history .transactions,
+.referrals-history .transactions {
+  padding: 3rem;
+  margin-top: 3.5rem;
+  /* Custom Select wrapper */
+  /* Remove IE arrow */
+  /* Arrow */
+}
+.transaction-history .transactions .top,
+.referrals-history .transactions .top {
+  margin-bottom: 3rem;
+}
+.transaction-history .transactions .top h3,
+.referrals-history .transactions .top h3 {
+  font-size: 2.1rem;
+  letter-spacing: -0.28px;
+}
+.transaction-history .transactions .select,
+.referrals-history .transactions .select {
+  position: relative;
+  display: flex;
+  width: 11rem;
+  height: 4rem;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+.transaction-history .transactions select,
+.referrals-history .transactions select {
+  /* Reset Select */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  color: #20244f;
+  flex: 1;
+  padding: 0 1em;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #dddde1;
+  border-radius: 6px;
+  font-weight: 500;
+  background-image: none;
+  cursor: pointer;
+}
+.transaction-history .transactions select::-ms-expand,
+.referrals-history .transactions select::-ms-expand {
+  display: none;
+}
+.transaction-history .transactions .select::after,
+.referrals-history .transactions .select::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #20244f;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 2.5px);
+  pointer-events: none;
+  z-index: 3;
+}
+.transaction-history .transaction,
+.referrals-history .transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.transaction-history .transaction:not(:last-of-type),
+.referrals-history .transaction:not(:last-of-type) {
+  border-bottom: 1px solid rgba(219, 219, 228, 0.542188);
+}
+.transaction-history .transaction-details,
+.referrals-history .transaction-details {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+.transaction-history .transaction-details .id p,
+.transaction-history .transaction-details .date p,
+.referrals-history .transaction-details .id p,
+.referrals-history .transaction-details .date p {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  letter-spacing: -0.25px;
+  color: rgba(32, 36, 79, 0.7);
+}
+.transaction-history .transaction-details .date p,
+.referrals-history .transaction-details .date p {
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: rgba(32, 36, 79, 0.5);
+}
+.transaction-history .transaction-status,
+.referrals-history .transaction-status {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+.transaction-history .transaction-status .status,
+.referrals-history .transaction-status .status {
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+  letter-spacing: -0.24143px;
+  color: #20244f;
+}
+.transaction-history .transaction-status .status.requested,
+.referrals-history .transaction-status .status.requested {
+  background: rgba(32, 36, 79, 0.1);
+  color: rgba(32, 36, 79, 0.6);
+}
+.transaction-history .transaction-status .status.processing,
+.referrals-history .transaction-status .status.processing {
+  background: #f4d0ac;
+}
+.transaction-history .transaction-status .status.completed,
+.referrals-history .transaction-status .status.completed {
+  background: #a4eeb3;
+}
+.transaction-history .transaction-status .value,
+.referrals-history .transaction-status .value {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  text-align: right;
+  letter-spacing: -0.27px;
+  color: #20244f;
+}
+.transaction-history .referrals,
+.referrals-history .referrals {
+  padding: 1rem 3rem;
+  margin-top: 3.5rem;
+}
+.transaction-history .referrals .referral,
+.referrals-history .referrals .referral {
+  padding: 1.6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.transaction-history .referrals .referral:not(:last-of-type),
+.referrals-history .referrals .referral:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+.transaction-history .referrals .referral > div,
+.referrals-history .referrals .referral > div {
+  width: 27%;
+}
+.transaction-history .referrals .referral-details .name,
+.referrals-history .referrals .referral-details .name {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: -0.27px;
+  color: #20244f;
+  opacity: 0.9;
+}
+.transaction-history .referrals .referral-details .status,
+.referrals-history .referrals .referral-details .status {
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+  letter-spacing: -0.24143px;
+  color: #20244f;
+  min-width: 11rem;
+}
+.transaction-history .referrals .referral-details .status.pending,
+.referrals-history .referrals .referral-details .status.pending {
+  background: rgba(32, 36, 79, 0.1);
+  color: rgba(32, 36, 79, 0.6);
+}
+.transaction-history .referrals .referral-details .status.registered,
+.referrals-history .referrals .referral-details .status.registered {
+  background: #a4eeb3;
+}
+.transaction-history .referrals .referral .email,
+.referrals-history .referrals .referral .email {
+  width: 30%;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: -0.27px;
+  color: #20244F;
+  opacity: 0.5;
+  padding-left: 5rem;
+}
+.transaction-history .referrals .referral .referral-amount .amount,
+.referrals-history .referrals .referral .referral-amount .amount {
+  background: #4263F6;
+  border-radius: 4px;
+  padding: 0.8rem 1.6rem;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: -0.33;
+  color: #FFFFFF;
+}
+.transaction-history .referrals .referral .referral-amount .amount span,
+.referrals-history .referrals .referral .referral-amount .amount span {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 0.5rem;
+}
+.transaction-history .referrals .referral .referral-amount.pending .amount,
+.referrals-history .referrals .referral .referral-amount.pending .amount {
+  background: rgba(66, 99, 246, 0.22);
+  color: rgba(32, 36, 79, 0.3);
+}
+.transaction-history .referrals .referral .referral-amount.pending .amount span,
+.referrals-history .referrals .referral .referral-amount.pending .amount span {
+  color: rgba(32, 36, 79, 0.3);
+}
+.transaction-history .referrals .referral .referral-amount.pending .value,
+.referrals-history .referrals .referral .referral-amount.pending .value {
+  opacity: 0.3;
+}
+.transaction-history .referrals .referral .referral-amount .value,
+.referrals-history .referrals .referral .referral-amount .value {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  text-align: right;
+  letter-spacing: -0.27px;
+  color: #20244F;
+}
+
+#addDevice {
+  position: absolute;
+}
+#addDevice .modal-content {
+  background: #4263f6;
+  border: 1px solid rgba(186, 189, 222, 0.348027);
+  border-radius: 1rem;
+  border: 0;
+}
+#addDevice .modal-body {
+  padding: 2.4rem;
+}
+#addDevice .modal-body img {
+  margin-bottom: 2.4rem;
+}
+#addDevice .modal-body h3 {
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: #ffffff;
+}
+#addDevice .modal-body p {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 1rem 0 3.2rem;
 }/*# sourceMappingURL=dashboard.css.map */

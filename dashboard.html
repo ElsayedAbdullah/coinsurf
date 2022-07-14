@@ -61,7 +61,7 @@
                 </div>
                 <p>Profile</p>
               </li>
-              <li class="mb-1 aside-item" data-content=".manual-setup">
+              <li class="mb-1 aside-item" data-content=".download-apps">
                 <div class="icon">
                   <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.5 24.2174H8.49998V7.85102V5.46757V5.86481H18.5V1.90431L8.49998 1.8924C7.17998 1.8924 6.09998 2.96495 6.09998 4.27584V25.7269C6.09998 27.0378 7.17998 28.1103 8.49998 28.1103H20.5C21.82 28.1103 22.9 27.0378 22.9 25.7269V19.7683H20.5V24.2174Z" fill="white" />
@@ -70,7 +70,7 @@
                 </div>
                 <p>Download Apps</p>
               </li>
-              <li class="mb-1 aside-item" data-content=".weplay">
+              <li class="mb-1 aside-item" data-content=".device-management">
                 <div class="icon">
                   <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3 1.4924H23.3C24.62 1.4924 25.7 2.56495 25.7 3.87585V25.3269C25.7 26.6378 24.62 27.7103 23.3 27.7103H11.3C9.98 27.7103 8.9 26.6378 8.9 25.3269V21.7517H11.3V24.1352H23.3V5.06757H11.3V7.45102H8.9V3.87585C8.9 2.56495 9.98 1.4924 11.3 1.4924ZM5.852 13.3143L8.912 16.3532L16.004 9.28628L17.528 10.7998L8.9 19.3683L4.328 14.8278L5.852 13.3143Z" fill="white" />
@@ -78,7 +78,7 @@
                 </div>
                 <p>Device management</p>
               </li>
-              <li class="mb-1 aside-item" data-content=".port-forwarding">
+              <li class="mb-1 aside-item" data-content=".transaction-history">
                 <div class="icon">
                   <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8999 17.5848C22.8999 18.8957 21.8199 19.9683 20.4999 19.9683H3.69993C2.37993 19.9683 1.29993 18.8957 1.29993 17.5848V8.05105C1.29993 6.74015 2.37993 5.6676 3.69993 5.6676H20.4999C21.8199 5.6676 22.8999 6.74015 22.8999 8.05105V17.5848ZM19.8599 17.5848C20.2134 17.5848 20.4999 17.2983 20.4999 16.9448V8.69105C20.4999 8.33759 20.2134 8.05105 19.8599 8.05105H4.33993C3.98646 8.05105 3.69993 8.33759 3.69993 8.69105V16.9448C3.69993 17.2983 3.98646 17.5848 4.33993 17.5848H19.8599ZM12.0999 9.24277C10.1079 9.24277 8.49993 10.8397 8.49993 12.8179C8.49993 14.7962 10.1079 16.3931 12.0999 16.3931C14.0919 16.3931 15.6999 14.7962 15.6999 12.8179C15.6999 10.8397 14.0919 9.24277 12.0999 9.24277ZM27.6999 9.88277C27.6999 9.52931 27.4134 9.24277 27.0599 9.24277H25.9399C25.5865 9.24277 25.2999 9.52931 25.2999 9.88277V21.5517C25.2999 21.9936 24.9418 22.3517 24.4999 22.3517H5.53993C5.18646 22.3517 4.89993 22.6383 4.89993 22.9917V24.0952C4.89993 24.4487 5.18646 24.7352 5.53993 24.7352H25.2999C26.6199 24.7352 27.6999 23.6626 27.6999 22.3517V9.88277Z" fill="white" />
@@ -86,7 +86,7 @@
                 </div>
                 <p>Transaction History</p>
               </li>
-              <li class="mb-1 aside-item" data-content=".wealert">
+              <li class="mb-1 aside-item" data-content=".referrals-history">
                 <div class="text d-inline-flex align-items-center">
                   <div class="icon">
                     <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +96,7 @@
                   <p>Referrals</p>
                 </div>
               </li>
-              <li class="mb-1 aside-item" data-content=".wealert">
+              <li class="mb-1 aside-item" data-content=".contactus">
                 <div class="text d-inline-flex align-items-center">
                   <div class="icon">
                     <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +144,7 @@
       <main class="dashboard-main">
         <div class="main-content">
           <div class="dashboard-content">
-            <div class="overview">
+            <div class="overview d-none">
               <div class="overview-info">
                 <div class="dashboard-container">
                   <div class="top-overview">
@@ -314,33 +314,6 @@
                           </ul>
                           <button class="add-device" type="button" data-bs-toggle="modal" data-bs-target="#addDevice">Add device</button>
                         </div>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="addDevice" tabindex="-1" aria-labelledby="addDeviceLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content text-center">
-                              <div class="modal-body">
-                                <img src="imgs/dashboard/modal-download.svg" alt="download app" />
-                                <h3>Download our Apps on every platform</h3>
-                                <p>Stay connected with Smartsurf no matter which platform you use</p>
-                                <div class="btns d-flex align-items-center text-center">
-                                  <a href="#">
-                                    <svg class="me-2" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.37122 0.137939H0.043457V8.4138H8.37122V0.137939ZM18.0869 0.137939H9.75918V8.4138H18.0869V0.137939ZM9.75918 9.79311H18.0869V18.069H9.75918V9.79311ZM8.37122 9.79311H0.043457V18.069H8.37122V9.79311Z" fill="#20244F" />
-                                    </svg>
-                                    <span>Download for Windows</span>
-                                  </a>
-                                  <a href="#">
-                                    <svg class="me-2" style="position: relative; top: -3px" width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.687 0.777266C13.687 1.87906 13.1965 2.98085 12.5032 3.77492C11.7675 4.65506 10.4945 5.30925 9.48231 5.30925C9.36638 5.30925 9.25045 5.29419 9.17911 5.28128C9.16573 5.22748 9.13675 5.05963 9.13675 4.89177C9.13675 3.77492 9.72978 2.67313 10.3652 1.9759C11.1744 1.06993 12.5166 0.385613 13.6447 0.344727C13.6736 0.469539 13.687 0.624479 13.687 0.777266ZM17.6645 7.71692C17.6922 7.69937 17.7112 7.68733 17.7201 7.68069C16.2174 5.60191 13.9345 5.54596 13.2991 5.54596C12.3271 5.54596 11.4569 5.87873 10.7257 6.15838C10.1957 6.36107 9.73865 6.53586 9.36861 6.53586C8.95959 6.53586 8.49132 6.35333 7.9688 6.14967C7.30936 5.89263 6.56351 5.60191 5.74132 5.60191C2.96791 5.60191 0.149902 7.82056 0.149902 12.0039C0.149902 14.6121 1.19105 17.3601 2.47966 19.129C3.59215 20.6354 4.55972 21.862 5.94643 21.862C6.60394 21.862 7.08603 21.6646 7.59303 21.457C8.1553 21.2268 8.74822 20.984 9.64506 20.984C10.5515 20.984 11.0931 21.212 11.6153 21.4319C12.1013 21.6365 12.5705 21.834 13.3013 21.834C14.8173 21.834 15.8139 20.5105 16.7681 19.185C17.8382 17.6786 18.2863 16.2002 18.2997 16.1314C18.2128 16.1034 15.3078 14.9736 15.3078 11.7801C15.3078 9.20865 17.2882 7.95509 17.6645 7.71692Z" fill="#20244F" />
-                                    </svg>
-                                    <span>Download for MacOS</span>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -403,7 +376,7 @@
                 </div>
               </div>
             </div>
-            <div class="profile">
+            <div class="profile d-none">
               <div class="dashboard-container">
                 <div class="profile-info d-flex align-items-center justify-content-between">
                   <div class="left d-flex align-items-center">
@@ -441,13 +414,11 @@
                             <label for="currentPassword">Current Password</label>
                             <div class="current-pwd-container">
                               <input type="password" id="currentPassword" value="123456" class="input-current-password form-control" placeholder="Type Your current password" />
-                            <span class="eye" id="eye">
-                              <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.74385 7.07924L2.92917 4.26456L4.41003 2.77319L23.0311 21.4047L21.5502 22.8856L17.9583 19.2937C16.551 19.8504 15.0176 20.1549 13.4212 20.1549C8.16995 20.1549 3.68535 16.8886 1.86841 12.278C2.67711 10.209 4.03194 8.42357 5.74385 7.07924ZM13.4212 6.5016C17.4017 6.5016 20.9516 8.73865 22.6845 12.278C22.0648 13.5593 21.1931 14.6621 20.1534 15.5548L21.6342 17.0357C23.0941 15.7439 24.2494 14.1265 24.974 12.278C23.1571 7.66739 18.6725 4.40109 13.4212 4.40109C12.0874 4.40109 10.8061 4.61114 9.5983 4.99974L11.3312 6.73266C12.0139 6.59613 12.7071 6.5016 13.4212 6.5016ZM12.2975 7.6989L14.4715 9.87293C15.0701 10.1355 15.5532 10.6186 15.8158 11.2173L17.9898 13.3913C18.0739 13.0342 18.1369 12.6561 18.1369 12.2675C18.1474 9.66288 16.0259 7.55186 13.4212 7.55186C13.0326 7.55186 12.665 7.60437 12.2975 7.6989ZM10.8061 12.1415L13.5473 14.8826C13.5052 14.8932 13.4632 14.9037 13.4212 14.9037C11.9719 14.9037 10.7956 13.7274 10.7956 12.278C10.7956 12.2518 10.7982 12.2308 10.8008 12.2097C10.8035 12.1887 10.8061 12.1677 10.8061 12.1415ZM9.07317 10.4086L7.23522 8.57061C5.96441 9.53684 4.89315 10.7761 4.15797 12.278C5.89089 15.8174 9.44076 18.0544 13.4212 18.0544C14.419 18.0544 15.3852 17.9074 16.3094 17.6553L15.2802 16.6261C14.713 16.8676 14.0829 17.0042 13.4212 17.0042C10.8166 17.0042 8.69507 14.8826 8.69507 12.278C8.69507 11.6164 8.83161 10.9862 9.07317 10.4086Z" fill="black"/>
+                              <span class="eye" id="eye">
+                                <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.74385 7.07924L2.92917 4.26456L4.41003 2.77319L23.0311 21.4047L21.5502 22.8856L17.9583 19.2937C16.551 19.8504 15.0176 20.1549 13.4212 20.1549C8.16995 20.1549 3.68535 16.8886 1.86841 12.278C2.67711 10.209 4.03194 8.42357 5.74385 7.07924ZM13.4212 6.5016C17.4017 6.5016 20.9516 8.73865 22.6845 12.278C22.0648 13.5593 21.1931 14.6621 20.1534 15.5548L21.6342 17.0357C23.0941 15.7439 24.2494 14.1265 24.974 12.278C23.1571 7.66739 18.6725 4.40109 13.4212 4.40109C12.0874 4.40109 10.8061 4.61114 9.5983 4.99974L11.3312 6.73266C12.0139 6.59613 12.7071 6.5016 13.4212 6.5016ZM12.2975 7.6989L14.4715 9.87293C15.0701 10.1355 15.5532 10.6186 15.8158 11.2173L17.9898 13.3913C18.0739 13.0342 18.1369 12.6561 18.1369 12.2675C18.1474 9.66288 16.0259 7.55186 13.4212 7.55186C13.0326 7.55186 12.665 7.60437 12.2975 7.6989ZM10.8061 12.1415L13.5473 14.8826C13.5052 14.8932 13.4632 14.9037 13.4212 14.9037C11.9719 14.9037 10.7956 13.7274 10.7956 12.278C10.7956 12.2518 10.7982 12.2308 10.8008 12.2097C10.8035 12.1887 10.8061 12.1677 10.8061 12.1415ZM9.07317 10.4086L7.23522 8.57061C5.96441 9.53684 4.89315 10.7761 4.15797 12.278C5.89089 15.8174 9.44076 18.0544 13.4212 18.0544C14.419 18.0544 15.3852 17.9074 16.3094 17.6553L15.2802 16.6261C14.713 16.8676 14.0829 17.0042 13.4212 17.0042C10.8166 17.0042 8.69507 14.8826 8.69507 12.278C8.69507 11.6164 8.83161 10.9862 9.07317 10.4086Z" fill="black" />
                                 </svg>
-                                
-                                
-                            </span>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -543,6 +514,476 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="download-apps d-none">
+              <div class="dashboard-container">
+                <h2>Get Started</h2>
+                <div class="download-box">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6 col-xl-5">
+                      <div class="text">
+                        <h3>Download our Apps on every platform</h3>
+                        <p>Stay connected with coinsurf no matter which platform you use</p>
+                        <div class="download-btns d-flex align-items-center text-center">
+                          <a href="#">
+                            <svg class="me-2" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.37122 0.137939H0.043457V8.4138H8.37122V0.137939ZM18.0869 0.137939H9.75918V8.4138H18.0869V0.137939ZM9.75918 9.79311H18.0869V18.069H9.75918V9.79311ZM8.37122 9.79311H0.043457V18.069H8.37122V9.79311Z" fill="#20244F" />
+                            </svg>
+                            <span>Download for Windows</span>
+                          </a>
+                          <a href="#">
+                            <svg class="me-2" style="position: relative; top: -3px" width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.687 0.777266C13.687 1.87906 13.1965 2.98085 12.5032 3.77492C11.7675 4.65506 10.4945 5.30925 9.48231 5.30925C9.36638 5.30925 9.25045 5.29419 9.17911 5.28128C9.16573 5.22748 9.13675 5.05963 9.13675 4.89177C9.13675 3.77492 9.72978 2.67313 10.3652 1.9759C11.1744 1.06993 12.5166 0.385613 13.6447 0.344727C13.6736 0.469539 13.687 0.624479 13.687 0.777266ZM17.6645 7.71692C17.6922 7.69937 17.7112 7.68733 17.7201 7.68069C16.2174 5.60191 13.9345 5.54596 13.2991 5.54596C12.3271 5.54596 11.4569 5.87873 10.7257 6.15838C10.1957 6.36107 9.73865 6.53586 9.36861 6.53586C8.95959 6.53586 8.49132 6.35333 7.9688 6.14967C7.30936 5.89263 6.56351 5.60191 5.74132 5.60191C2.96791 5.60191 0.149902 7.82056 0.149902 12.0039C0.149902 14.6121 1.19105 17.3601 2.47966 19.129C3.59215 20.6354 4.55972 21.862 5.94643 21.862C6.60394 21.862 7.08603 21.6646 7.59303 21.457C8.1553 21.2268 8.74822 20.984 9.64506 20.984C10.5515 20.984 11.0931 21.212 11.6153 21.4319C12.1013 21.6365 12.5705 21.834 13.3013 21.834C14.8173 21.834 15.8139 20.5105 16.7681 19.185C17.8382 17.6786 18.2863 16.2002 18.2997 16.1314C18.2128 16.1034 15.3078 14.9736 15.3078 11.7801C15.3078 9.20865 17.2882 7.95509 17.6645 7.71692Z" fill="#20244F" />
+                            </svg>
+                            <span>Download for MacOS</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7">
+                      <div class="image text-lg-end">
+                        <img class="img-fluid" src="imgs/dashboard/platform-download.svg" alt="download-apps" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="app-tutorials">
+                  <div class="row">
+                    <div class="col-lg-6 col-xxl-4">
+                      <div class="app-tutorial w-100 box-style">
+                        <div class="app-name">MacOs</div>
+                        <div class="app-body">
+                          <div class="title">
+                            <div class="d-flex align-items-center">
+                              <div class="version me-3">2.1</div>
+                              <h4>What’s new?</h4>
+                            </div>
+                            <p class="date">Feb 25. 2022</p>
+                          </div>
+                          <div class="desc">
+                            <p>We update the coinsurf app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:</p>
+                            <ul>
+                              <li>- Updates to improve localization across the app</li>
+                              <li>- Various bug fixes & improvements</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4">
+                      <div class="app-tutorial w-100 box-style">
+                        <div class="app-name">Windows</div>
+                        <div class="app-body">
+                          <div class="title">
+                            <div class="d-flex align-items-center">
+                              <div class="version me-3">2.0</div>
+                              <h4>What’s new?</h4>
+                            </div>
+                            <p class="date">Mar 15. 2022</p>
+                          </div>
+                          <div class="desc">
+                            <p>We update the coinsurf app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:</p>
+                            <ul>
+                              <li>- Updates to improve localization across the app</li>
+                              <li>- Various bug fixes & improvements</li>
+                            </ul>
+                            <ul class="content">
+                              <li>- Updates to improve localization across the app</li>
+                              <li>- Various bug fixes & improvements</li>
+                              <li>- Updates to improve localization across the app</li>
+                              <li>- Various bug fixes & improvements</li>
+                            </ul>
+                          </div>
+                          <span class="read-more show_hide">read all</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4">
+                      <div class="app-tutorial w-100 box-style">
+                        <div class="app-name">Android</div>
+                        <div class="app-body">
+                          <div class="title">
+                            <div class="version me-3 disabled">1.0</div>
+                          </div>
+                          <div class="desc">
+                            <h3>Coming Soon!</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4">
+                      <div class="app-tutorial w-100 box-style">
+                        <div class="app-body">
+                          <div class="title">
+                            <div class="d-flex align-items-center">
+                              <div class="version me-3">2.1</div>
+                              <h4>What’s new?</h4>
+                            </div>
+                            <p class="date">Feb 25. 2022</p>
+                          </div>
+                          <div class="desc">
+                            <p>We update the coinsurf app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:</p>
+                            <ul>
+                              <li>- Updates to improve localization across the app</li>
+                              <li>- Various bug fixes & improvements</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="device-management d-none">
+              <div class="dashboard-container">
+                <div class="manage-devices d-flex align-items-center justify-content-between">
+                  <h2>Manage your devices</h2>
+                  <button class="main-btn" type="button" data-bs-toggle="modal" data-bs-target="#addDevice">Add Device</button>
+                </div>
+                <div class="devices box-style">
+                  <div class="device">
+                    <div class="device-name">
+                      <div class="icon">
+                        <svg width="34" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33552 0H30.4812C32.1401 0 33.4974 1.35 33.4974 3V21C33.4974 22.65 32.1401 24 30.4812 24H19.9246L22.9408 28.5V30H10.876V28.5L13.8922 24H3.33552C1.67662 24 0.319336 22.65 0.319336 21V3C0.319336 1.35 1.67662 0 3.33552 0ZM3.33552 18H30.4812V3H3.33552V18Z" fill="black" />
+                        </svg>
+                      </div>
+                      <p>iMac</p>
+                    </div>
+                    <div class="device-type">macOS 10.14</div>
+                    <div class="device-active">
+                      <p>online</p>
+                      <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="6.81152" cy="6" r="6" fill="#31D860" />
+                      </svg>
+                    </div>
+                    <div class="device-earn">$ 621</div>
+                  </div>
+                  <div class="device">
+                    <div class="device-name">
+                      <div class="icon">
+                        <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g opacity="0.747338">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.9406 1.5H12.8758C10.3724 1.5 8.35156 3.51 8.35156 6V30C8.35156 32.49 10.3724 34.5 12.8758 34.5H24.9406C27.444 34.5 29.4649 32.49 29.4649 30V6C29.4649 3.51 27.444 1.5 24.9406 1.5ZM26.4487 27H11.3678V6H26.4487V27ZM15.892 31.5H21.9244V30H15.892V31.5Z" fill="black" />
+                          </g>
+                        </svg>
+                      </div>
+                      <p>Android</p>
+                    </div>
+                    <div class="device-type">Android 14</div>
+                    <div class="device-active">
+                      <p>2 hours ago</p>
+                    </div>
+                    <div class="device-earn">$ 1521</div>
+                  </div>
+                  <div class="device">
+                    <div class="device-name">
+                      <div class="icon">
+                        <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g opacity="0.747338">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.9896 24C33.9896 25.65 32.6323 27 30.9734 27H37.0058V30H0.811523V27H6.8439C5.185 27 3.82771 25.65 3.82771 24V9C3.82771 7.35 5.185 6 6.8439 6H30.9734C32.6323 6 33.9896 7.35 33.9896 9V24ZM30.9734 9H6.8439V24H30.9734V9Z" fill="black" />
+                          </g>
+                        </svg>
+                      </div>
+                      <p>Windows</p>
+                    </div>
+                    <div class="device-type">Windows 11.3</div>
+                    <div class="device-active">
+                      <p>1 day ago</p>
+                    </div>
+                    <div class="device-earn">$ 3.152.05</div>
+                  </div>
+                  <div class="device">
+                    <div class="device-name">
+                      <div class="icon">
+                        <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g opacity="0.747338">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.9896 24C33.9896 25.65 32.6323 27 30.9734 27H37.0058V30H0.811523V27H6.8439C5.185 27 3.82771 25.65 3.82771 24V9C3.82771 7.35 5.185 6 6.8439 6H30.9734C32.6323 6 33.9896 7.35 33.9896 9V24ZM30.9734 9H6.8439V24H30.9734V9Z" fill="black" />
+                          </g>
+                        </svg>
+                      </div>
+                      <p>Windows</p>
+                    </div>
+                    <div class="device-type">Windows 10</div>
+                    <div class="device-active">
+                      <p>2 days ago</p>
+                    </div>
+                    <div class="device-earn">$ 4.521</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="transaction-history d-none">
+              <div class="dashboard-container">
+                <div class="transaction-info">
+                  <div class="left">
+                    <p>Amount transactioned</p>
+                    <div class="amount"><span class="usd me-2">$</span>6.723</div>
+                  </div>
+                  <div class="right">
+                    <p>Number of transactions</p>
+                    <div class="amount transaction-num">152</div>
+                  </div>
+                </div>
+                <div class="transactions box-style">
+                  <div class="top d-flex align-items-center justify-content-between">
+                    <h3>Withdraws</h3>
+                    <div class="select">
+                      <select name="transaction-period">
+                        <option value="7days">7-days</option>
+                        <option value="30days">30-days</option>
+                        <option value="60days" selected>60-days</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="transaction">
+                    <div class="transaction-details">
+                      <div class="id d-flex align-items-center">
+                        <p>ID</p>
+                        <p class="ms-4">512644</p>
+                      </div>
+                      <div class="date">
+                        <p>Feb 2. 2022</p>
+                      </div>
+                    </div>
+                    <div class="transaction-status">
+                      <div class="status requested">Requested</div>
+                      <div class="value">$ 1521</div>
+                    </div>
+                  </div>
+                  <div class="transaction">
+                    <div class="transaction-details">
+                      <div class="id d-flex align-items-center">
+                        <p>ID</p>
+                        <p class="ms-4">661464</p>
+                      </div>
+                      <div class="date">
+                        <p>Feb 20. 2022</p>
+                      </div>
+                    </div>
+                    <div class="transaction-status">
+                      <div class="status processing">Processing</div>
+                      <div class="value">$ 421</div>
+                    </div>
+                  </div>
+                  <div class="transaction">
+                    <div class="transaction-details">
+                      <div class="id d-flex align-items-center">
+                        <p>ID</p>
+                        <p class="ms-4">775366</p>
+                      </div>
+                      <div class="date">
+                        <p>Feb 14. 2022</p>
+                      </div>
+                    </div>
+                    <div class="transaction-status">
+                      <div class="status completed">Completed</div>
+                      <div class="value">$ 723</div>
+                    </div>
+                  </div>
+                  <div class="transaction">
+                    <div class="transaction-details">
+                      <div class="id d-flex align-items-center">
+                        <p>ID</p>
+                        <p class="ms-4">775366</p>
+                      </div>
+                      <div class="date">
+                        <p>Feb 14. 2022</p>
+                      </div>
+                    </div>
+                    <div class="transaction-status">
+                      <div class="status completed">Completed</div>
+                      <div class="value">$ 723</div>
+                    </div>
+                  </div>
+                  <div class="transaction">
+                    <div class="transaction-details">
+                      <div class="id d-flex align-items-center">
+                        <p>ID</p>
+                        <p class="ms-4">775366</p>
+                      </div>
+                      <div class="date">
+                        <p>Feb 14. 2022</p>
+                      </div>
+                    </div>
+                    <div class="transaction-status">
+                      <div class="status completed">Completed</div>
+                      <div class="value">$ 723</div>
+                    </div>
+                  </div>
+                  <div class="transaction">
+                    <div class="transaction-details">
+                      <div class="id d-flex align-items-center">
+                        <p>ID</p>
+                        <p class="ms-4">775366</p>
+                      </div>
+                      <div class="date">
+                        <p>Feb 14. 2022</p>
+                      </div>
+                    </div>
+                    <div class="transaction-status">
+                      <div class="status completed">Completed</div>
+                      <div class="value">$ 723</div>
+                    </div>
+                  </div>
+                  <div class="transaction">
+                    <div class="transaction-details">
+                      <div class="id d-flex align-items-center">
+                        <p>ID</p>
+                        <p class="ms-4">775366</p>
+                      </div>
+                      <div class="date">
+                        <p>Feb 14. 2022</p>
+                      </div>
+                    </div>
+                    <div class="transaction-status">
+                      <div class="status completed">Completed</div>
+                      <div class="value">$ 723</div>
+                    </div>
+                  </div>
+                  <div class="transaction">
+                    <div class="transaction-details">
+                      <div class="id d-flex align-items-center">
+                        <p>ID</p>
+                        <p class="ms-4">775366</p>
+                      </div>
+                      <div class="date">
+                        <p>Feb 14. 2022</p>
+                      </div>
+                    </div>
+                    <div class="transaction-status">
+                      <div class="status completed">Completed</div>
+                      <div class="value">$ 723</div>
+                    </div>
+                  </div>
+                  <div class="transaction">
+                    <div class="transaction-details">
+                      <div class="id d-flex align-items-center">
+                        <p>ID</p>
+                        <p class="ms-4">775366</p>
+                      </div>
+                      <div class="date">
+                        <p>Feb 14. 2022</p>
+                      </div>
+                    </div>
+                    <div class="transaction-status">
+                      <div class="status completed">Completed</div>
+                      <div class="value">$ 723</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="referrals-history d-block">
+              <div class="dashboard-container">
+                <div class="referral-info">
+                  <div class="left">
+                    <p>Refferal earnings</p>
+                    <div class="amount"><span class="usd me-2">$</span>451</div>
+                  </div>
+                  <div class="right">
+                    <p>Number of 
+                      users referred</p>
+                    <div class="amount transaction-num">4</div>
+                  </div>
+                </div>
+                <div class="referrals box-style">
+                  <div class="referral">
+                    <div class="referral-details d-flex align-items-center justify-content-between">
+                      <div class="name">James Cameron</div>
+                    <div class="status registered">Registered</div>
+                    </div>
+                    <div class="email">jamescameron@gmail.com</div>
+                    <div class="referral-amount d-flex justify-content-between align-items-center">
+                      <div class="amount"><span>%</span>20 USD</div>
+                      <div class="value">$ 152</div>
+                    </div>
+                  </div>
+                  <div class="referral">
+                    <div class="referral-details d-flex align-items-center justify-content-between">
+                      <div class="name">James Cameron</div>
+                    <div class="status pending">Pending</div>
+                    </div>
+                    <div class="email">jessicaj@gmail.com</div>
+                    <div class="referral-amount pending d-flex justify-content-between align-items-center">
+                      <div class="amount"><span>%</span>20 USD</div>
+                      <div class="value">$ 0.00</div>
+                    </div>
+                  </div>
+                  <div class="referral">
+                    <div class="referral-details d-flex align-items-center justify-content-between">
+                      <div class="name">Bill</div>
+                    <div class="status registered">Registered</div>
+                    </div>
+                    <div class="email">billreconstruct@yahoo.com</div>
+                    <div class="referral-amount d-flex justify-content-between align-items-center">
+                      <div class="amount"><span>%</span>20 USD</div>
+                      <div class="value">$ 95</div>
+                    </div>
+                  </div>
+                  <div class="referral">
+                    <div class="referral-details d-flex align-items-center justify-content-between">
+                      <div class="name">Andreea</div>
+                    <div class="status pending">Pending</div>
+                    </div>
+                    <div class="email">andreeaj88@yahoo.com</div>
+                    <div class="referral-amount pending d-flex justify-content-between align-items-center">
+                      <div class="amount"><span>%</span>20 USD</div>
+                      <div class="value">$ 0.00</div>
+                    </div>
+                  </div>
+                  <div class="referral">
+                    <div class="referral-details d-flex align-items-center justify-content-between">
+                      <div class="name">Carmen D</div>
+                    <div class="status registered">Registered</div>
+                    </div>
+                    <div class="email">carmendesign@gmail.uk</div>
+                    <div class="referral-amount d-flex justify-content-between align-items-center">
+                      <div class="amount"><span>%</span>20 USD</div>
+                      <div class="value">$ 110</div>
+                    </div>
+                  </div>
+                  <div class="referral">
+                    <div class="referral-details d-flex align-items-center justify-content-between">
+                      <div class="name">Fabian Albert</div>
+                    <div class="status registered">Registered</div>
+                    </div>
+                    <div class="email">timeloopvisuals@gmail.com</div>
+                    <div class="referral-amount d-flex justify-content-between align-items-center">
+                      <div class="amount"><span>%</span>20 USD</div>
+                      <div class="value">$ 251</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="addDevice" tabindex="-1" aria-labelledby="addDeviceLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content text-center">
+                <div class="modal-body">
+                  <img src="imgs/dashboard/modal-download.svg" alt="download app" />
+                  <h3>Download our Apps on every platform</h3>
+                  <p>Stay connected with coinsurf no matter which platform you use</p>
+                  <div class="download-btns d-flex align-items-center text-center">
+                    <a href="#">
+                      <svg class="me-2" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.37122 0.137939H0.043457V8.4138H8.37122V0.137939ZM18.0869 0.137939H9.75918V8.4138H18.0869V0.137939ZM9.75918 9.79311H18.0869V18.069H9.75918V9.79311ZM8.37122 9.79311H0.043457V18.069H8.37122V9.79311Z" fill="#20244F" />
+                      </svg>
+                      <span>Download for Windows</span>
+                    </a>
+                    <a href="#">
+                      <svg class="me-2" style="position: relative; top: -3px" width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.687 0.777266C13.687 1.87906 13.1965 2.98085 12.5032 3.77492C11.7675 4.65506 10.4945 5.30925 9.48231 5.30925C9.36638 5.30925 9.25045 5.29419 9.17911 5.28128C9.16573 5.22748 9.13675 5.05963 9.13675 4.89177C9.13675 3.77492 9.72978 2.67313 10.3652 1.9759C11.1744 1.06993 12.5166 0.385613 13.6447 0.344727C13.6736 0.469539 13.687 0.624479 13.687 0.777266ZM17.6645 7.71692C17.6922 7.69937 17.7112 7.68733 17.7201 7.68069C16.2174 5.60191 13.9345 5.54596 13.2991 5.54596C12.3271 5.54596 11.4569 5.87873 10.7257 6.15838C10.1957 6.36107 9.73865 6.53586 9.36861 6.53586C8.95959 6.53586 8.49132 6.35333 7.9688 6.14967C7.30936 5.89263 6.56351 5.60191 5.74132 5.60191C2.96791 5.60191 0.149902 7.82056 0.149902 12.0039C0.149902 14.6121 1.19105 17.3601 2.47966 19.129C3.59215 20.6354 4.55972 21.862 5.94643 21.862C6.60394 21.862 7.08603 21.6646 7.59303 21.457C8.1553 21.2268 8.74822 20.984 9.64506 20.984C10.5515 20.984 11.0931 21.212 11.6153 21.4319C12.1013 21.6365 12.5705 21.834 13.3013 21.834C14.8173 21.834 15.8139 20.5105 16.7681 19.185C17.8382 17.6786 18.2863 16.2002 18.2997 16.1314C18.2128 16.1034 15.3078 14.9736 15.3078 11.7801C15.3078 9.20865 17.2882 7.95509 17.6645 7.71692Z" fill="#20244F" />
+                      </svg>
+                      <span>Download for MacOS</span>
+                    </a>
                   </div>
                 </div>
               </div>

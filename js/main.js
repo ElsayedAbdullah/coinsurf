@@ -70,4 +70,12 @@ $(function () {
     passCheck();
   })
 
+  // read more button
+  $(".content").hide();
+  $(".show_hide").on("click", function () {
+      var txt = $(".content").is(':visible') ? 'read all' : 'collapse';
+      $(".show_hide").text(txt);
+      $(this).siblings().find('.content').slideToggle(200);
+  });
+
 });
