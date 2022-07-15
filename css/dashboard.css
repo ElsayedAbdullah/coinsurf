@@ -25,19 +25,14 @@ html {
   font-size: 62.5%;
   /* 62.5% == 0.625*16px == 10px */
 }
-@media only screen and (min-width: 112.5em) {
+@media only screen and (max-width: 87.5em) {
   html {
-    font-size: 75%;
-  }
-}
-@media only screen and (max-width: 75em) {
-  html {
-    font-size: 56.25%;
+    font-size: 50%;
   }
 }
 @media only screen and (max-width: 56.25em) {
   html {
-    font-size: 50%;
+    font-size: 43.75%;
   }
 }
 
@@ -47,6 +42,24 @@ body {
   line-height: 1.6;
   color: #20244f;
   overflow-x: hidden;
+}
+
+body.overlay {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+body.overlay:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  margin: 0;
+  overflow: hidden;
 }
 
 ul {
@@ -88,19 +101,20 @@ h6 {
 .download-btns a {
   background: #ffffff;
   border-radius: 7px;
-  padding: 1.2rem 1.6rem;
+  padding: 0 1.6rem;
+  line-height: 48px;
   display: inline-block;
   font-weight: 500;
   font-size: 1.6rem;
-  line-height: 2rem;
   color: #20244f;
   text-decoration: none;
   transition: 0.2s;
+  width: 50%;
+  display: block;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 767px) {
   .download-btns a {
-    padding: 1rem;
-    font-size: 1.4rem;
+    width: 100%;
   }
 }
 .download-btns a:hover {
@@ -109,6 +123,7 @@ h6 {
 @media (max-width: 767px) {
   .download-btns a {
     display: block;
+    width: 100%;
   }
 }
 .download-btns a:not(:last-child) {
@@ -155,6 +170,47 @@ aside {
   height: 100vh;
   color: #fff;
 }
+aside .aside-content {
+  overflow: auto;
+  height: 100%;
+}
+@media (max-width: 991px) {
+  aside {
+    width: 100%;
+    overflow: visible;
+    z-index: 10;
+    max-width: unset;
+    min-width: unset;
+    position: absolute;
+    height: auto;
+    background: rgba(255, 255, 255, 0.88);
+    border-bottom: 1px solid #e5e7eb;
+  }
+  aside .aside-content {
+    background-color: #fff;
+    padding-bottom: 70px;
+    position: fixed;
+    transform: translateX(-100%);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.15s ease-in;
+    max-width: 330px;
+    width: 300px;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  aside .aside-content.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
 aside .aside-item {
   display: flex;
   align-items: center;
@@ -163,14 +219,36 @@ aside .aside-item {
   cursor: pointer;
   border-radius: 7px;
 }
+@media (max-width: 991px) {
+  aside .aside-item {
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+  }
+  aside .aside-item svg path {
+    fill: #141735;
+  }
+}
 aside .aside-item:hover p {
   color: #fff;
+}
+@media (max-width: 991px) {
+  aside .aside-item:hover p {
+    color: #141735;
+  }
 }
 aside .aside-item.active {
   background: #3a3f73;
 }
 aside .aside-item.active p {
   color: #fff;
+}
+@media (max-width: 991px) {
+  aside .aside-item.active {
+    background: #fff;
+  }
+  aside .aside-item.active p {
+    color: #20244f;
+  }
 }
 aside .aside-item:not(:last-of-type) {
   margin-bottom: 1rem;
@@ -182,6 +260,20 @@ aside .aside-item p {
   margin-left: 1.5rem;
   transition: 0.2s ease-in-out;
 }
+@media (max-width: 991px) {
+  aside .aside-item p {
+    letter-spacing: 0.598517px;
+    color: #5f638f;
+  }
+}
+@media (max-width: 991px) {
+  aside .aside-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+  }
+}
 aside .logo {
   margin: 5rem 0 4rem;
   text-align: center;
@@ -189,6 +281,16 @@ aside .logo {
 aside .logo svg {
   width: 17rem;
   height: auto;
+}
+@media (max-width: 991px) {
+  aside .logo {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  aside .social-icons {
+    padding-top: 3rem;
+  }
 }
 aside .social-icons li svg g,
 aside .social-icons li svg path {
@@ -200,6 +302,56 @@ aside .social-icons li:not(:last-of-type) {
 aside .social-icons li:hover svg g,
 aside .social-icons li:hover svg path {
   opacity: 1;
+}
+@media (max-width: 991px) {
+  aside .social-icons li svg path,
+aside .social-icons li svg g {
+    fill: #20244f;
+    opacity: 0.9;
+  }
+}
+aside .menu-toggler {
+  display: block;
+  width: 28px;
+  background: transparent;
+}
+aside .menu-toggler span {
+  display: block;
+  height: 3px;
+  background: #20244f;
+  width: 100%;
+  margin: 5px 0;
+}
+aside button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+aside .nav-mobile {
+  padding: 20px;
+}
+aside .nav-mobile .close {
+  padding: 9px 14px;
+  width: 42px;
+  height: 42px;
+  background: #4263f6;
+  border-radius: 10px;
+  border: 0;
+}
+aside .page-title svg {
+  width: 20px;
+  height: auto;
+  margin-right: 1rem;
+}
+aside .page-title svg path {
+  fill: #20244f;
+}
+aside .page-title p {
+  color: #20244f;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 0.6px;
 }
 
 @media (min-width: 992px) {
@@ -246,6 +398,11 @@ aside .social-icons li:hover svg path {
 .dashboard-main .main-content .dashboard-content > div {
   padding: 6rem 0;
 }
+@media (min-width: 992px) and (max-width: 1400px) {
+  .dashboard-main .main-content .dashboard-content > div {
+    padding: 2.4rem 0;
+  }
+}
 .dashboard-main .main-content .dashboard-content > div:not(:first-child) {
   display: none;
 }
@@ -271,12 +428,24 @@ aside .social-icons li:hover svg path {
   text-decoration: none;
   font-weight: 700;
   font-size: 1.6rem;
-  padding: 1.3rem 2.4rem;
-  line-height: 3rem;
+  padding: 0 2.4rem;
+  line-height: 46px;
   align-items: center;
+  justify-content: center;
 }
 .overview .main-btn span:first-child {
   margin-right: 1rem;
+}
+@media (max-width: 767px) {
+  .overview .main-btn span:first-child svg {
+    width: 25px;
+    height: auto;
+  }
+}
+.overview .request-payout {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
 }
 .overview #requestPayout .modal-content {
   padding: 2.4rem;
@@ -292,13 +461,28 @@ aside .social-icons li:hover svg path {
   color: rgba(32, 36, 79, 0.75);
   margin: 1.2rem 0 0.8rem;
 }
+@media (max-width: 767px) {
+  .overview #requestPayout .top {
+    flex-wrap: wrap;
+  }
+  .overview #requestPayout .top button.send-request {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .overview #requestPayout .top .payout-amount {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 .overview #requestPayout .top .amount .amount-val {
   background: #f4f5fb;
   border: 1px solid rgba(66, 99, 246, 0.48838);
   border-radius: 9px;
-  padding: 1.2rem 2rem;
+  padding: 12px 20px;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 20px;
   line-height: 2.3rem;
   color: #4263f6;
   display: inline-block;
@@ -309,14 +493,14 @@ aside .social-icons li:hover svg path {
 }
 .overview #requestPayout .top .remaining-balance p {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 1.6rem;
   color: #4263f6;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 }
 .overview #requestPayout .top .remaining-balance .value {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 20px;
   line-height: 2.3rem;
   color: #4263f6;
 }
@@ -367,6 +551,27 @@ aside .social-icons li:hover svg path {
 .overview-info {
   transition: 0.2s;
 }
+@media (min-width: 992px) and (max-width: 1400px) {
+  .overview-info .top-overview {
+    padding: 2.4rem 0;
+  }
+  .overview-info .top-overview p {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+  }
+  .overview-info .top-overview .today .label,
+.overview-info .top-overview .balance:after {
+    display: none;
+  }
+  .overview-info .top-overview div > span {
+    font-size: 2.9rem;
+    line-height: 3.4rem;
+  }
+  .overview-info .top-overview h3 {
+    font-size: 3.7rem;
+    line-height: 4.4rem;
+  }
+}
 .overview-info.sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -376,7 +581,7 @@ aside .social-icons li:hover svg path {
   z-index: 5;
 }
 .overview-info.sticky .top-overview {
-  padding: 2.4rem;
+  padding: 2.4rem 0;
 }
 .overview-info.sticky .top-overview p {
   font-size: 1.8rem;
@@ -408,10 +613,33 @@ aside .social-icons li:hover svg path {
   align-items: center;
   padding: 0 2rem 3rem;
 }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .top-overview {
+    padding: 0 0 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .top-overview {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
 .top-overview .balance {
   position: relative;
   margin-right: 5rem;
   padding-right: 5rem;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .top-overview .balance {
+    margin-right: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .top-overview .balance {
+    padding: 0;
+    margin-right: 2rem;
+  }
 }
 .top-overview .balance:after {
   content: "";
@@ -425,14 +653,16 @@ aside .social-icons li:hover svg path {
   top: 0;
   right: 0;
 }
+@media (max-width: 767px) {
+  .top-overview .balance:after {
+    display: none;
+  }
+}
 .top-overview .today {
-  margin-right: 8rem;
+  margin-right: 5rem;
   position: relative;
 }
 .top-overview .today .label {
-  position: absolute;
-  top: -5px;
-  right: -3.5rem;
   font-weight: 500;
   font-size: 2rem;
   line-height: 2.4rem;
@@ -442,23 +672,57 @@ aside .social-icons li:hover svg path {
           backdrop-filter: blur(5px);
   border-radius: 1.6rem;
   padding: 0.4rem 1.2rem;
+  margin-left: 1rem;
+}
+@media (max-width: 767px) {
+  .top-overview .all,
+.top-overview .today {
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 0 0 8px;
+    padding: 1.6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767px) {
+  .top-overview .earnings {
+    order: 3;
+    flex-direction: column;
+    border-top: 1px solid #dbdbe3;
+    margin-top: 16px;
+    padding-top: 16px;
+    width: 100%;
+  }
 }
 .top-overview p {
   font-size: 2rem;
   line-height: 2.5rem;
 }
 .top-overview div > span {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 4rem;
-  line-height: 5.5rem;
 }
 .top-overview h3 {
   font-weight: 900;
   font-size: 5rem;
-  line-height: 6rem;
-  color: #20244f;
 }
 
+.overview-body .earnings-chart {
+  padding: 3rem;
+}
+@media (max-width: 767px) {
+  .overview-body .earnings-chart {
+    margin: 12px 0 24px;
+  }
+}
+.overview-body .earnings-chart .chart-info {
+  margin-bottom: 1.6rem;
+}
+.overview-body .earnings-chart .chart-info h3 {
+  font-size: 2.2rem;
+}
 .overview-body .devices {
   padding: 3rem;
   background: #ffffff;
@@ -501,6 +765,12 @@ aside .social-icons li:hover svg path {
   color: #20244f;
   opacity: 0.75;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .overview-body .devices li .left svg {
+    width: 30px;
+    height: auto;
+  }
+}
 .overview-body .devices li .date {
   font-size: 1.8rem;
   line-height: 2.1rem;
@@ -518,7 +788,7 @@ aside .social-icons li:hover svg path {
   display: block;
   margin-top: 2rem;
   width: 100%;
-  padding: 1.2rem;
+  line-height: 48px;
   text-align: center;
   transition: 0.2s;
 }
@@ -534,9 +804,13 @@ aside .social-icons li:hover svg path {
 }
 .overview-body .referral-code p {
   font-weight: 500;
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 1.8rem;
   margin-bottom: 2.5rem;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .overview-body .referral-code p {
+    font-size: 1.6rem;
+  }
 }
 .overview-body .referral-code .share-code p {
   color: #ffffff;
@@ -561,11 +835,11 @@ aside .social-icons li:hover svg path {
 .overview-body .referral-code .send-invite form button {
   background: #ffffff;
   border-radius: 6px;
-  padding: 1.3rem 2rem;
+  padding: 0 1.6rem;
+  line-height: 48px;
   color: #20244f;
   font-weight: 500;
   font-size: 1.7rem;
-  line-height: 2rem;
   border: 0;
   min-height: 5rem;
   transition: 0.2s;
@@ -583,6 +857,20 @@ aside .social-icons li:hover svg path {
 .overview-body .referral-code .send-invite form input::placeholder {
   color: rgba(32, 36, 79, 0.5);
 }
+@media (max-width: 767px) {
+  .overview-body .referral-code .send-invite {
+    margin-top: 24px;
+  }
+  .overview-body .referral-code .send-invite p {
+    text-align: left;
+  }
+  .overview-body .referral-code .send-invite form {
+    justify-content: flex-start;
+  }
+  .overview-body .referral-code .send-invite form input {
+    flex: 1;
+  }
+}
 .overview-body .faq {
   margin-top: 3.5rem;
 }
@@ -596,11 +884,8 @@ aside .social-icons li:hover svg path {
   margin-bottom: 1.5rem;
   border: 0;
   background-color: #fff;
-  padding: 2.4rem 3.2rem;
 }
 .overview-body .faq .accordion-button {
-  -webkit-backdrop-filter: blur(2.7rem);
-          backdrop-filter: blur(2.7rem);
   background: rgba(255, 255, 255, 0.4);
   font-weight: 700;
   font-size: 2.3rem;
@@ -610,6 +895,7 @@ aside .social-icons li:hover svg path {
   font-family: "Roboto", sans-serif;
   padding: 0;
   border-radius: 1rem;
+  padding: 2.4rem;
 }
 .overview-body .faq .accordion-button:not(.collapsed) {
   background: transparent;
@@ -617,7 +903,7 @@ aside .social-icons li:hover svg path {
   opacity: 1;
 }
 .overview-body .faq .accordion-body {
-  padding: 1.6rem 0 0;
+  padding: 0 2.4rem 2.4rem;
   font-weight: 500;
   font-size: 2.1rem;
   color: #20244f;
@@ -1031,9 +1317,6 @@ aside .social-icons li:hover svg path {
 .referrals-history .transactions {
   padding: 3rem;
   margin-top: 3.5rem;
-  /* Custom Select wrapper */
-  /* Remove IE arrow */
-  /* Arrow */
 }
 .transaction-history .transactions .top,
 .referrals-history .transactions .top {
@@ -1043,54 +1326,6 @@ aside .social-icons li:hover svg path {
 .referrals-history .transactions .top h3 {
   font-size: 2.1rem;
   letter-spacing: -0.28px;
-}
-.transaction-history .transactions .select,
-.referrals-history .transactions .select {
-  position: relative;
-  display: flex;
-  width: 11rem;
-  height: 4rem;
-  border-radius: 0.25em;
-  overflow: hidden;
-}
-.transaction-history .transactions select,
-.referrals-history .transactions select {
-  /* Reset Select */
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  border: 0;
-  box-shadow: none;
-  /* Personalize */
-  color: #20244f;
-  flex: 1;
-  padding: 0 1em;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #dddde1;
-  border-radius: 6px;
-  font-weight: 500;
-  background-image: none;
-  cursor: pointer;
-}
-.transaction-history .transactions select::-ms-expand,
-.referrals-history .transactions select::-ms-expand {
-  display: none;
-}
-.transaction-history .transactions .select::after,
-.referrals-history .transactions .select::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #20244f;
-  position: absolute;
-  right: 10px;
-  top: calc(50% - 2.5px);
-  pointer-events: none;
-  z-index: 3;
 }
 .transaction-history .transaction,
 .referrals-history .transaction {
@@ -1219,20 +1454,20 @@ aside .social-icons li:hover svg path {
   font-size: 2rem;
   line-height: 2.3rem;
   letter-spacing: -0.27px;
-  color: #20244F;
+  color: #20244f;
   opacity: 0.5;
   padding-left: 5rem;
 }
 .transaction-history .referrals .referral .referral-amount .amount,
 .referrals-history .referrals .referral .referral-amount .amount {
-  background: #4263F6;
+  background: #4263f6;
   border-radius: 4px;
   padding: 0.8rem 1.6rem;
   font-weight: 700;
   font-size: 2rem;
   line-height: 2.3rem;
   letter-spacing: -0.33;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .transaction-history .referrals .referral .referral-amount .amount span,
 .referrals-history .referrals .referral .referral-amount .amount span {
@@ -1263,12 +1498,146 @@ aside .social-icons li:hover svg path {
   line-height: 2.3rem;
   text-align: right;
   letter-spacing: -0.27px;
-  color: #20244F;
+  color: #20244f;
 }
 
-#addDevice {
-  position: absolute;
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 11rem;
+  height: 4rem;
+  border-radius: 0.25em;
+  overflow: hidden;
 }
+
+select {
+  /* Reset Select */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  color: #20244f;
+  flex: 1;
+  padding: 0 1em;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #dddde1;
+  border-radius: 6px;
+  font-weight: 500;
+  background-image: none;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Arrow */
+.select::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #20244f;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 2.5px);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.contactus .top h2 {
+  font-size: 4.6rem;
+  letter-spacing: -0.63px;
+  margin-bottom: 1.6rem;
+}
+.contactus .top p {
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: -0.25px;
+  color: rgba(32, 36, 79, 0.75);
+}
+.contactus .top .social-icons {
+  display: flex;
+  align-items: center;
+}
+.contactus .top .social-icons li:not(:last-of-type) {
+  margin-right: 4rem;
+}
+.contactus .top .social-icons a {
+  opacity: 0.4;
+  transition: 0.2s;
+}
+.contactus .top .social-icons a:hover {
+  opacity: 1;
+}
+.contactus .contactus-content {
+  padding-top: 100px;
+}
+.contactus .contact-form {
+  background: #ffffff;
+  border: 1px solid #dddde1;
+  -webkit-backdrop-filter: blur(36.2156px);
+          backdrop-filter: blur(36.2156px);
+  border-radius: 13.1662px;
+  padding: 3rem;
+  max-width: 50rem;
+  margin: auto;
+}
+.contactus .contact-form .form-group {
+  margin-bottom: 1.6rem;
+}
+.contactus .contact-form .form-group label {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.25px;
+  color: #20244f;
+  opacity: 0.75;
+  margin-bottom: 8px;
+  display: block;
+}
+.contactus .contact-form .form-group input,
+.contactus .contact-form .form-group textarea {
+  background: #ffffff;
+  border: 1px solid #c9cad0;
+  border-radius: 4px;
+  padding: 1.3rem 1.6rem;
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: -0.26px;
+  color: #20244f;
+  outline: none;
+}
+.contactus .contact-form .form-group textarea {
+  background: rgba(240, 240, 247, 0.272368);
+  border: 0.932607px solid #cccdd7;
+  border-radius: 4px;
+  padding: 1.6rem;
+  min-height: 14rem;
+}
+.contactus .contact-form button {
+  padding: 1.6rem;
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  #requestPayout,
+#addDevice {
+    position: absolute;
+  }
+}
+
 #addDevice .modal-content {
   background: #4263f6;
   border: 1px solid rgba(186, 189, 222, 0.348027);

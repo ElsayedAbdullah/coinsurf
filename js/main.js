@@ -17,13 +17,13 @@ $(function () {
     if ($(window).width() < 992) {
       $(".aside-content").toggleClass("show");
       $("body, html").removeClass("overlay");
-      $(".navbar-toggler").removeClass("open");
     }
     $(".dashboard-items ul li").removeClass("active");
     $(".dashboard-main .main-content, html, body").scrollTop(0);
     $(this).addClass("active");
     $(".main-content .dashboard-content > div").hide();
     $($(this).data("content")).fadeIn();
+    $('.page-title').html($(this).html())
   });
 
   //fixed navbar when scrolling
@@ -77,5 +77,16 @@ $(function () {
       $(".show_hide").text(txt);
       $(this).siblings().find('.content').slideToggle(200);
   });
+
+
+  $('.nav-mobile .close').click(function() {
+    $("aside .aside-content").removeClass('show')
+    $("body").removeClass("overlay");
+  })
+
+  $('.menu-toggler').click(function() {
+    $("aside .aside-content").addClass('show')
+    $("body").addClass("overlay");
+  })
 
 });
