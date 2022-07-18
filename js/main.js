@@ -27,13 +27,13 @@ $(function () {
   });
 
   //fixed navbar when scrolling
-  $(".dashboard-main .main-content").on("scroll", function () {
-    if ($(this).scrollTop() > 60) {
-      $(".overview .overview-info").addClass("sticky");
-    } else {
-      $(".overview .overview-info").removeClass("sticky");
-    }
-  });
+  // $(".dashboard-main .main-content").on("scroll", function () {
+  //   if ($(this).scrollTop() > 60) {
+  //     $(".overview .overview-info").addClass("sticky");
+  //   } else {
+  //     $(".overview .overview-info").removeClass("sticky");
+  //   }
+  // });
 
   // toggle between payment methods
   $(".payment--method .label-radio").on("click", function () {
