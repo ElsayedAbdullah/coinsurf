@@ -480,6 +480,27 @@ button {
   }
 }
 
+.hero-image .trustpilot-reviews a span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+  margin-right: 8px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-image .trustpilot-reviews a span {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-image .trustpilot-reviews a span {
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 767px) {
   .hero-image .shapes {
     display: none;
@@ -795,6 +816,27 @@ button {
   display: inline-block;
 }
 
+.get-started .trustpilot-reviews a span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1px;
+  color: #000;
+  margin-right: 8px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .get-started .trustpilot-reviews a span {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .get-started .trustpilot-reviews a span {
+    font-size: 18px;
+  }
+}
+
 footer {
   background: linear-gradient(180deg, #120f33 0%, #20244f 100%);
   padding: 100px 0 50px;
@@ -896,8 +938,7 @@ footer .btns a:not(:last-child) {
 }
 
 footer .footer-col .footer-logo {
-  margin-bottom: 70px;
-  display: block;
+  margin-bottom: 45px;
 }
 
 footer .footer-col h5 {
@@ -919,20 +960,14 @@ footer .footer-col h5.second {
 footer .footer-col a {
   opacity: 0.6;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 24px;
   transition: 0.2s;
 }
 
 footer .footer-col a:hover {
   opacity: 1;
   color: #fff;
-}
-
-@media (min-width: 1000px) {
-  footer .footer-col .links-list {
-    min-height: 345px;
-  }
 }
 
 footer .footer-col .general-info {
@@ -947,8 +982,8 @@ footer .footer-col .general-info {
 
 footer .footer-col .general-info p {
   font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -1002,29 +1037,31 @@ footer .footer-col form input::placeholder {
   color: rgba(255, 255, 255, 0.43);
 }
 
-footer .footer-col .social-icons li {
-  display: inline-block;
-}
-
-footer .footer-col .social-icons li a {
-  opacity: 1;
-}
-
-footer .footer-col .social-icons li a:hover {
-  opacity: 0.7;
-}
-
-footer .footer-col .social-icons li:not(:last-child) {
-  margin-right: 24px;
-}
-
 footer .copyright {
+  margin-top: 50px;
+}
+
+footer .copyright p {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   opacity: 0.6;
-  margin-top: 50px;
-  text-align: center;
+}
+
+footer .copyright .social-icons li {
+  display: inline-block;
+}
+
+footer .copyright .social-icons li a {
+  transition: .2s;
+}
+
+footer .copyright .social-icons li a:hover {
+  opacity: 0.7;
+}
+
+footer .copyright .social-icons li:not(:last-child) {
+  margin-right: 24px;
 }
 
 @media (max-width: 991px) {
