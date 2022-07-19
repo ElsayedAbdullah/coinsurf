@@ -12,6 +12,37 @@ header.homepage-header {
   }
 }
 
+header.header-white {
+  border-bottom: 1px solid rgba(#4263f6, 0.19);
+  button:hover {
+    color: #20244f;
+  }
+  .menu-toggle {
+    color: rgba(#20244f, 0.8);
+  }
+  .nav-link {
+    color: #20244f;
+    opacity: .8;
+    transition: .2s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  @media #{$maxTab} {
+    height: 70px;
+    .navbar-nav .signup-link,
+    .navbar-nav .login-link {
+      border: 1px solid #1a3bcc;
+      color: #1a3bcc;
+      opacity: 1;
+    }
+    .navbar-nav .signup-link {
+      background-color: #1a3bcc;
+      color: #fff;
+    }
+  }
+}
+
 // Navbar
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link,
@@ -33,7 +64,7 @@ header.homepage-header {
   color: #fff;
   opacity: 0.6;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 18px;
   position: relative;
 

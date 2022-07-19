@@ -30,6 +30,10 @@ $primaryColor: "#20244f";
     font-size: 58px;
     line-height: 140%;
 
+    @media (min-width: 1400px) {
+      font-size: 74px;
+    }
+
     @media #{$betweentabdesk} {
       font-size: 40px;
     }
@@ -114,7 +118,6 @@ $primaryColor: "#20244f";
         font-weight: 400;
         font-size: 24px;
         line-height: 20px;
-        letter-spacing: -1px;
         color: #ffffff;
         margin-right: 8px;
         @media #{$tablet} {
@@ -427,7 +430,6 @@ $primaryColor: "#20244f";
         font-weight: 400;
         font-size: 24px;
         line-height: 21px;
-        letter-spacing: -1px;
         color: #000;
         margin-right: 8px;
         @media #{$tablet} {
@@ -771,6 +773,3 @@ $primaryColor: "#20244f";
   }
 }
 
-.bg-light-blue {
-  background: #ECEFFA !important;
-}

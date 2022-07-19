@@ -1,0 +1,86 @@
+// variables
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 991px)";
+$maxTab: "(max-width: 991px)";
+$betweentabdesk: "(min-width: 992px) and (max-width: 1200px)";
+$primaryColor: "#20244f";
+
+// import common sections styles
+@import "./common_sections/global";
+@import "./common_sections/header";
+@import "./common_sections/footer";
+
+.reset-pwd {
+  padding: 80px 0;
+  @media #{$maxTab} {
+    padding: 50px 0;
+  }
+}
+
+.reset-pwd-content {
+  background: #ffffff;
+  box-shadow: 0px 8px 44px rgba(0, 0, 0, 0.11);
+  border-radius: 29px;
+  padding: 36px;
+  @media #{$tablet} {
+    padding: 24px;
+  }
+  @media #{$mobile} {
+    padding: 24px 16px;
+  }
+  h1 {
+    font-size: 36px;
+    @media #{$mobile} {
+      font-size: 28px;
+    }
+  }
+  .text {
+    font-size: 14px;
+  }
+  .form-group {
+    margin-bottom: 24px;
+    @media #{$mobile} {
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 10px;
+      @media #{$mobile} {
+        font-size: 14px;
+      }
+    }
+    input {
+      padding: 14px 24px;
+      background: #ffffff;
+      border: 1px solid #dfdfdf;
+      border-radius: 10px;
+      display: block;
+      width: 100%;
+      @media #{$mobile} {
+        font-size: 14px;
+        padding: 10px 16px;
+      }
+    }
+    button[type="submit"] {
+      padding: 17px 24px;
+      border-radius: 11px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 20px;
+      color: #ffffff;
+      @media #{$maxTab} {
+        font-size: 16px;
+      }
+      @media #{$mobile} {
+        padding: 12px 16px;
+      }
+    }
+  }
+  .form-footer {
+    @media #{$mobile} {
+      font-size: 14px;
+    }
+  }
+}

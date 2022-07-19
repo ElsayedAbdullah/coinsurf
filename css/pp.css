@@ -97,6 +97,26 @@ button {
   outline: none;
 }
 
+.bg-light-blue {
+  background: #EFF2FF !important;
+}
+
+.main-btn {
+  background: #4263f6;
+  border-radius: 7.2px;
+  color: #fff;
+  transition: 0.2s;
+  border: 0;
+}
+
+.main-btn:hover {
+  background: #0b34e9;
+}
+
+.main-btn:active {
+  background: #8399f9;
+}
+
 header.homepage-header {
   background: #4263f6;
   overflow: hidden;
@@ -109,6 +129,39 @@ header.homepage-header {
 @media (min-width: 2000px) {
   header.homepage-header {
     height: 1100px;
+  }
+}
+
+header.header-white {
+  border-bottom: 1px solid rgba(66, 99, 246, 0.19);
+}
+header.header-white button:hover {
+  color: #20244f;
+}
+header.header-white .menu-toggle {
+  color: rgba(32, 36, 79, 0.8);
+}
+header.header-white .nav-link {
+  color: #20244f;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+header.header-white .nav-link:hover {
+  opacity: 1;
+}
+@media (max-width: 991px) {
+  header.header-white {
+    height: 70px;
+  }
+  header.header-white .navbar-nav .signup-link,
+header.header-white .navbar-nav .login-link {
+    border: 1px solid #1a3bcc;
+    color: #1a3bcc;
+    opacity: 1;
+  }
+  header.header-white .navbar-nav .signup-link {
+    background-color: #1a3bcc;
+    color: #fff;
   }
 }
 
@@ -133,7 +186,7 @@ header.homepage-header {
   color: #fff;
   opacity: 0.6;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 18px;
   position: relative;
 }
@@ -452,10 +505,14 @@ footer .footer-col h5.second {
 }
 footer .footer-col a {
   opacity: 0.6;
-  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   transition: 0.2s;
+}
+@media (min-width: 992px) {
+  footer .footer-col a {
+    font-weight: 500;
+  }
 }
 footer .footer-col a:hover {
   opacity: 1;
@@ -470,9 +527,13 @@ footer .footer-col .general-info {
   }
 }
 footer .footer-col .general-info p {
-  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+}
+@media (min-width: 992px) {
+  footer .footer-col .general-info p {
+    font-weight: 500;
+  }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   footer .footer-col .general-info p {
@@ -532,10 +593,14 @@ footer .copyright {
   margin-top: 50px;
 }
 footer .copyright p {
-  font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   opacity: 0.6;
+}
+@media (min-width: 992px) {
+  footer .copyright p {
+    font-weight: 500;
+  }
 }
 footer .copyright .social-icons li {
   display: inline-block;

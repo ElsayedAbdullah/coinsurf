@@ -92,3 +92,23 @@ button {
   cursor: pointer;
   outline: none;
 }
+
+.bg-light-blue {
+  background: #EFF2FF !important;
+}
+
+.main-btn {
+  background: #4263f6;
+  border-radius: 7.2px;
+  color: #fff;
+  transition: 0.2s;
+  border: 0;
+}
+
+.main-btn:hover {
+  background: #0b34e9;
+}
+
+.main-btn:active {
+  background: #8399f9;
+}
