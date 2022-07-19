@@ -54,6 +54,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  line-height: 140%;
 }
 
 .section {
@@ -566,10 +567,20 @@ footer .copyright .social-icons li:not(:last-child) {
 .header-pb {
   padding-bottom: 540px;
 }
+@media (max-width: 991px) {
+  .header-pb {
+    padding-bottom: 580px;
+  }
+}
 
 footer.footer-pt {
   padding-top: 270px;
   margin-top: -200px;
+}
+@media (max-width: 991px) {
+  footer.footer-pt {
+    padding-top: 210px;
+  }
 }
 
 .tos,
@@ -659,6 +670,7 @@ footer.footer-pt {
   line-height: 160%;
   margin-bottom: 10px;
   font-size: 18px;
+  opacity: 0.8;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .tos ul li, .tos ol li,
@@ -696,6 +708,11 @@ footer.footer-pt {
     width: 0.7em;
   }
 }
+.tos .coin-link,
+.pp .coin-link {
+  color: #4263F6;
+  text-decoration: underline;
+}
 .tos h3,
 .pp h3 {
   margin-bottom: 15px;
@@ -711,6 +728,18 @@ footer.footer-pt {
 .pp h3 {
     font-size: 18px;
     margin-bottom: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .tos h5,
+.pp h5 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .tos h5,
+.pp h5 {
+    font-size: 16px;
   }
 }
 .tos p,
