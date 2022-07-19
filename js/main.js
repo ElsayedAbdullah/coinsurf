@@ -12,6 +12,14 @@ $(function () {
     $("body").toggleClass("overlay");
   });
 
+  // load the common section in the website
+  $("[data-load]").each(function () {
+    $(this).load($(this).data("load"), function () {
+      // make updating the year on footer
+      $("#year-now").text(new Date().getFullYear());
+    });
+  });
+
   // add class active when click on items on sidebar and moving to the right content
   $(".dashboard-items ul li").on("click", function () {
     if ($(window).width() < 992) {
@@ -23,7 +31,7 @@ $(function () {
     $(this).addClass("active");
     $(".main-content .dashboard-content > div").hide();
     $($(this).data("content")).fadeIn();
-    $('.page-title').html($(this).html())
+    $(".page-title").html($(this).html());
   });
 
   //fixed navbar when scrolling
@@ -50,43 +58,40 @@ $(function () {
     }
   });
 
-  $('.profile .profile-info .right button').on('click', function () {
-    $('.profile .change-password').toggle()
-  })
-
+  $(".profile .profile-info .right button").on("click", function () {
+    $(".profile .change-password").toggle();
+  });
 
   // validation for new password and confirm password
-  var newPassword =$('#new-password')
-  var confirmPassword =$('#confirm-password')
+  var newPassword = $("#new-password");
+  var confirmPassword = $("#confirm-password");
 
   function passCheck() {
     document.getElementById("save-password").disabled = newPassword.val().length === 0 || newPassword.val() != confirmPassword.val();
   }
 
-  $(newPassword).on('keyup', function () {
+  $(newPassword).on("keyup", function () {
     passCheck();
-  })
-  $(confirmPassword).on('keyup', function () {
+  });
+  $(confirmPassword).on("keyup", function () {
     passCheck();
-  })
+  });
 
   // read more button
   $(".content").hide();
   $(".show_hide").on("click", function () {
-      var txt = $(".content").is(':visible') ? 'read all' : 'collapse';
-      $(".show_hide").text(txt);
-      $(this).siblings().find('.content').slideToggle(200);
+    var txt = $(".content").is(":visible") ? "read all" : "collapse";
+    $(".show_hide").text(txt);
+    $(this).siblings().find(".content").slideToggle(200);
   });
 
-
-  $('.nav-mobile .close').click(function() {
-    $("aside .aside-content").removeClass('show')
+  $(".nav-mobile .close").click(function () {
+    $("aside .aside-content").removeClass("show");
     $("body").removeClass("overlay");
-  })
+  });
 
-  $('.menu-toggler').click(function() {
-    $("aside .aside-content").addClass('show')
+  $(".menu-toggler").click(function () {
+    $("aside .aside-content").addClass("show");
     $("body").addClass("overlay");
-  })
-
+  });
 });

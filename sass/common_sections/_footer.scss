@@ -1,0 +1,227 @@
+// Footer
+footer {
+  background: linear-gradient(180deg, #120f33 0%, #20244f 100%);
+  padding: 100px 0 50px;
+  color: white;
+  position: relative;
+  z-index: 1;
+
+  .footer-title {
+    font-weight: 500;
+  }
+
+  @media #{$mobile} {
+    padding: 50px 0;
+  }
+
+  @media (min-width: 1000px) {
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url(../imgs/homepage/map.png);
+      top: 0;
+      left: -220px;
+      right: 0;
+      height: 500px;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  a,
+  p {
+    color: white;
+  }
+
+  .btns {
+    margin: 50px 0 100px;
+
+    @media #{$mobile} {
+      margin: 40px 0;
+    }
+
+    a {
+      background: #ffffff;
+      border-radius: 7.21739px;
+      padding: 15px 18px;
+      display: inline-block;
+      font-weight: 500;
+      font-size: 18.0435px;
+      line-height: 21px;
+      color: #20244f;
+      text-decoration: none;
+      transition: 0.2s;
+
+      &:hover {
+        background: #bebcde;
+      }
+
+      @media #{$mobile} {
+        display: block;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+
+        @media #{$mobile} {
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
+
+  .footer-col {
+    @media #{$maxTab} {
+      margin-bottom: 50px;
+    }
+
+    &.fourth-col {
+      @media #{$mobile} {
+        display: flex;
+
+        .top-col,
+        .bottom-col {
+          flex: 1;
+        }
+
+        .bottom-col {
+          h5 {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .footer-logo {
+      margin-bottom: 45px;
+    }
+
+    h5 {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 24px;
+
+      &.second {
+        margin-top: 80px;
+
+        @media #{$mobile} {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    a {
+      opacity: 0.6;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      transition: 0.2s;
+
+      &:hover {
+        opacity: 1;
+        color: #fff;
+      }
+    }
+
+    .general-info {
+      margin-bottom: 80px;
+
+      @media #{$mobile} {
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+
+        @media #{$betweentabdesk} {
+          font-size: 14px;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 14px;
+        }
+
+        span {
+          color: rgba(255, 255, 255, 0.503919);
+        }
+      }
+    }
+
+    ul {
+      li {
+        margin-bottom: 15px;
+      }
+    }
+
+    form {
+      margin-bottom: 80px;
+
+      @media #{$mobile} {
+        margin-bottom: 40px;
+      }
+
+      label {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 15px;
+      }
+
+      input {
+        background: rgba(#ffffff, 0.07);
+        border-radius: 8px;
+        display: block;
+        border: 0;
+        padding: 11px 16px;
+        color: #fff;
+
+        &::placeholder {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: rgba(#ffffff, 0.43);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 50px;
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 0.6;
+    }
+
+    .social-icons {
+      li {
+        display: inline-block;
+
+        a {
+          transition: 0.2s;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 24px;
+        }
+      }
+    }
+
+    @media #{$maxTab} {
+      margin-top: 0;
+    }
+
+    @media #{$mobile} {
+      font-size: 12px;
+    }
+  }
+}
