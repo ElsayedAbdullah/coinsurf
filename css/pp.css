@@ -566,6 +566,8 @@ footer .copyright .social-icons li:not(:last-child) {
 
 .header-pb {
   padding-bottom: 540px;
+  position: relative;
+  z-index: 3;
 }
 @media (max-width: 991px) {
   .header-pb {

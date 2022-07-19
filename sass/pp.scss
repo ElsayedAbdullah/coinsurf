@@ -17,6 +17,8 @@ $primaryColor: "#20244f";
 
 .header-pb {
   padding-bottom: 540px;
+  position: relative;
+    z-index: 3;
   @media #{$maxTab} {
     padding-bottom: 580px;
   }
