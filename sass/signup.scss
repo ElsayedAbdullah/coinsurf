@@ -1,0 +1,206 @@
+// variables
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 991px)";
+$maxTab: "(max-width: 991px)";
+$betweentabdesk: "(min-width: 992px) and (max-width: 1200px)";
+$primaryColor: "#20244f";
+
+// import common sections styles
+@import "./common_sections/global";
+@import "./common_sections/header";
+
+.header-white {
+  .navbar-nav .nav-link.active,
+  .navbar-nav .show > .nav-link,
+  .nav-link:focus,
+  .nav-link:hover {
+    color: #4263f6;
+  }
+
+  .nav-link:not(.dropdown-toggle)::after {
+    background-color: #4263f6;
+  }
+}
+.coinsurf-signup {
+  height: calc(100vh - 70px);
+  @media #{$mobile} {
+    height: auto;
+  }
+  @media (max-height: 550px) {
+    min-height: 500px;
+  }
+  @media (max-height: 600px) and (min-width: 992px) {
+    min-height: 630px;
+  }
+  .coinsurf-signup-content {
+    height: 100%;
+    display: flex;
+    > div {
+      width: 50%;
+    }
+  }
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    @media #{$betweentabdesk} {
+      padding: 32px;
+    }
+    @media #{$tablet} {
+      padding: 24px;
+    }
+    h3 {
+      font-size: 36px;
+      color: #20244f;
+      @media #{$betweentabdesk} {
+        font-size: 30px;
+      }
+      @media #{$tablet} {
+        font-size: 24px;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      color: #5b5863;
+      margin: 15px 0 35px;
+      @media #{$betweentabdesk} {
+        font-size: 15px;
+        margin: 15px 0 25px;
+      }
+      @media #{$tablet} {
+        font-size: 14px;
+        margin: 15px 0 24px;
+      }
+    }
+    a {
+      padding: 10px 20px;
+      display: inline-block;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .right-side {
+    background-image: linear-gradient(180deg, #284df3 0%, #718bff 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+    @media #{$betweentabdesk} {
+      padding: 32px;
+    }
+    @media #{$tablet} {
+      padding: 24px;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    h1 {
+      font-size: 45px;
+      color: #ffffff;
+      @media (min-width: 1200px) and (max-width: 1400px) {
+        font-size: 38px;
+      }
+      @media #{$betweentabdesk} {
+        font-size: 32px;
+      }
+      @media #{$tablet} {
+        font-size: 24px;
+      }
+      span {
+        color: #fecc15;
+      }
+    }
+    .desc {
+      font-size: 25px;
+      color: #ffffff;
+      max-width: 610px;
+      margin: 0 auto;
+      @media (min-width: 1200px) and (max-width: 1400px) {
+        font-size: 20px;
+      }
+      @media #{$betweentabdesk} {
+        font-size: 18px;
+      }
+      @media #{$tablet} {
+        font-size: 17px;
+      }
+    }
+    .text {
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      position: absolute;
+      bottom: 8%;
+      @media #{$betweentabdesk} {
+        font-size: 13px;
+        padding: 32px;
+      }
+      @media #{$tablet} {
+        font-size: 14px;
+        padding: 0 24px;
+      }
+    }
+  }
+
+  .signup-mobile {
+    text-align: center;
+    background-image: linear-gradient(180deg, #284df3 0%, #718bff 100%);
+    padding: 40px 0;
+    height: calc(100vh - 70px);
+    @media (max-height: 600px) {
+      height: auto;
+    }
+
+    &-content {
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0px 8px 44px rgba(0, 0, 0, 0.11);
+      border-radius: 20px;
+      padding: 36px 16px;
+      max-width: 350px;
+      margin: 0 auto;
+      h2 {
+        font-size: 24px;
+        line-height: 28px;
+        color: #20244f;
+      }
+      p.desc {
+        font-size: 16px;
+        color: #5b5863;
+        margin-bottom: 36px;
+      }
+      p.text {
+        font-size: 16px;
+        color: #5b5863;
+        margin-top: 36px;
+        a {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+          color: #4263f6;
+        }
+      }
+    }
+    .footer-text {
+      font-size: 14px;
+      color: #ffffff;
+      margin-top: 44px;
+      max-width: 350px;
+      margin: 44px auto 0;
+    }
+  }
+}

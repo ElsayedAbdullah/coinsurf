@@ -161,7 +161,7 @@ header.header-white .navbar-nav .login-link {
   }
   header.header-white .navbar-nav .signup-link {
     background-color: #1a3bcc;
-    color: #fff;
+    color: #fff !important;
   }
 }
 
@@ -174,7 +174,7 @@ header.header-white .navbar-nav .login-link {
 }
 
 .navbar-expand-lg .navbar-nav .nav-item:not(:last-of-type) {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 @media (max-width: 991px) {
   .navbar-expand-lg .navbar-nav .nav-item:not(:last-of-type) {
@@ -211,7 +211,7 @@ header.header-white .navbar-nav .login-link {
 }
 
 .navbar-expand-lg {
-  padding: 1.2rem 0;
+  padding: 17px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.19);
   position: relative;
   z-index: 2;

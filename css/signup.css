@@ -400,319 +400,234 @@ button.is-active:after {
   }
 }
 
-footer {
-  background: linear-gradient(180deg, #120f33 0%, #20244f 100%);
-  padding: 100px 0 50px;
-  color: white;
-  position: relative;
-  z-index: 1;
+.header-white .navbar-nav .nav-link.active,
+.header-white .navbar-nav .show > .nav-link,
+.header-white .nav-link:focus,
+.header-white .nav-link:hover {
+  color: #4263f6;
 }
-footer .footer-title {
-  font-weight: 500;
+.header-white .nav-link:not(.dropdown-toggle)::after {
+  background-color: #4263f6;
 }
-@media (max-width: 767px) {
-  footer {
-    padding: 50px 0;
-  }
-}
-@media (min-width: 1000px) {
-  footer:before {
-    content: "";
-    position: absolute;
-    background-image: url(../imgs/homepage/map.png);
-    top: 0;
-    left: -220px;
-    right: 0;
-    height: 500px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-}
-footer a,
-footer p {
-  color: white;
-}
-footer .btns {
-  margin: 50px 0 100px;
+
+.coinsurf-signup {
+  height: calc(100vh - 70px);
 }
 @media (max-width: 767px) {
-  footer .btns {
-    margin: 40px 0;
+  .coinsurf-signup {
+    height: auto;
   }
 }
-footer .btns a {
-  background: #ffffff;
-  border-radius: 7.21739px;
-  padding: 15px 18px;
-  display: inline-block;
-  font-weight: 500;
-  font-size: 18.0435px;
-  line-height: 21px;
-  color: #20244f;
-  text-decoration: none;
-  transition: 0.2s;
-}
-footer .btns a:hover {
-  background: #bebcde;
-}
-@media (max-width: 767px) {
-  footer .btns a {
-    display: block;
+@media (max-height: 550px) {
+  .coinsurf-signup {
+    min-height: 500px;
   }
 }
-footer .btns a:not(:last-child) {
-  margin-right: 10px;
-}
-@media (max-width: 767px) {
-  footer .btns a:not(:last-child) {
-    margin: 0 0 10px 0;
+@media (max-height: 600px) and (min-width: 992px) {
+  .coinsurf-signup {
+    min-height: 630px;
   }
 }
-@media (max-width: 991px) {
-  footer .footer-col {
-    margin-bottom: 50px;
-  }
+.coinsurf-signup .coinsurf-signup-content {
+  height: 100%;
+  display: flex;
 }
-@media (max-width: 767px) {
-  footer .footer-col.fourth-col {
-    display: flex;
-  }
-  footer .footer-col.fourth-col .top-col,
-footer .footer-col.fourth-col .bottom-col {
-    flex: 1;
-  }
-  footer .footer-col.fourth-col .bottom-col h5 {
-    margin-top: 0;
-  }
+.coinsurf-signup .coinsurf-signup-content > div {
+  width: 50%;
 }
-footer .footer-col .footer-logo {
-  margin-bottom: 45px;
-}
-footer .footer-col h5 {
-  font-size: 18px;
-  line-height: 21px;
-  margin-bottom: 24px;
-}
-footer .footer-col h5.second {
-  margin-top: 80px;
-}
-@media (max-width: 767px) {
-  footer .footer-col h5.second {
-    margin-top: 50px;
-  }
-}
-footer .footer-col a {
-  opacity: 0.6;
-  font-size: 16px;
-  line-height: 24px;
-  transition: 0.2s;
-}
-@media (min-width: 992px) {
-  footer .footer-col a {
-    font-weight: 500;
-  }
-}
-footer .footer-col a:hover {
-  opacity: 1;
-  color: #fff;
-}
-footer .footer-col .general-info {
-  margin-bottom: 80px;
-}
-@media (max-width: 767px) {
-  footer .footer-col .general-info {
-    margin-bottom: 40px;
-  }
-}
-footer .footer-col .general-info p {
-  font-size: 16px;
-  line-height: 24px;
-}
-@media (min-width: 992px) {
-  footer .footer-col .general-info p {
-    font-weight: 500;
-  }
+.coinsurf-signup .left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
 }
 @media (min-width: 992px) and (max-width: 1200px) {
-  footer .footer-col .general-info p {
-    font-size: 14px;
+  .coinsurf-signup .left-side {
+    padding: 32px;
   }
-}
-footer .footer-col .general-info p:not(:last-of-type) {
-  margin-bottom: 14px;
-}
-footer .footer-col .general-info p span {
-  color: rgba(255, 255, 255, 0.503919);
-}
-footer .footer-col ul li {
-  margin-bottom: 15px;
-}
-footer .footer-col form {
-  margin-bottom: 80px;
-}
-@media (max-width: 767px) {
-  footer .footer-col form {
-    margin-bottom: 40px;
-  }
-}
-footer .footer-col form label {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  margin-bottom: 15px;
-}
-footer .footer-col form input {
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 8px;
-  display: block;
-  border: 0;
-  padding: 11px 16px;
-  color: #fff;
-}
-footer .footer-col form input::-moz-placeholder {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: rgba(255, 255, 255, 0.43);
-}
-footer .footer-col form input:-ms-input-placeholder {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: rgba(255, 255, 255, 0.43);
-}
-footer .footer-col form input::placeholder {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: rgba(255, 255, 255, 0.43);
-}
-footer .copyright {
-  margin-top: 50px;
-}
-footer .copyright p {
-  font-size: 14px;
-  line-height: 16px;
-  opacity: 0.6;
-}
-@media (min-width: 992px) {
-  footer .copyright p {
-    font-weight: 500;
-  }
-}
-footer .copyright .social-icons li {
-  display: inline-block;
-}
-footer .copyright .social-icons li a {
-  transition: 0.2s;
-}
-footer .copyright .social-icons li a:hover {
-  opacity: 0.7;
-}
-footer .copyright .social-icons li:not(:last-child) {
-  margin-right: 24px;
-}
-@media (max-width: 991px) {
-  footer .copyright {
-    margin-top: 0;
-  }
-}
-@media (max-width: 767px) {
-  footer .copyright {
-    font-size: 12px;
-  }
-}
-
-.reset-pwd {
-  padding: 80px 0;
-}
-@media (max-width: 991px) {
-  .reset-pwd {
-    padding: 50px 0;
-  }
-}
-
-.reset-pwd-content {
-  background: #ffffff;
-  box-shadow: 0px 8px 44px rgba(0, 0, 0, 0.11);
-  border-radius: 29px;
-  padding: 36px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .reset-pwd-content {
+  .coinsurf-signup .left-side {
     padding: 24px;
   }
 }
-@media (max-width: 767px) {
-  .reset-pwd-content {
-    padding: 24px 16px;
-  }
-}
-.reset-pwd-content h1 {
+.coinsurf-signup .left-side h3 {
   font-size: 36px;
+  color: #20244f;
 }
-@media (max-width: 767px) {
-  .reset-pwd-content h1 {
-    font-size: 28px;
+@media (min-width: 992px) and (max-width: 1200px) {
+  .coinsurf-signup .left-side h3 {
+    font-size: 30px;
   }
 }
-.reset-pwd-content .text {
-  font-size: 14px;
-}
-.reset-pwd-content .form-group {
-  margin-bottom: 24px;
-}
-@media (max-width: 767px) {
-  .reset-pwd-content .form-group {
-    margin-bottom: 16px;
+@media (min-width: 768px) and (max-width: 991px) {
+  .coinsurf-signup .left-side h3 {
+    font-size: 24px;
   }
 }
-.reset-pwd-content .form-group label {
-  display: block;
+.coinsurf-signup .left-side p {
+  font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
-  margin-bottom: 10px;
+  color: #5b5863;
+  margin: 15px 0 35px;
 }
-@media (max-width: 767px) {
-  .reset-pwd-content .form-group label {
-    font-size: 14px;
+@media (min-width: 992px) and (max-width: 1200px) {
+  .coinsurf-signup .left-side p {
+    font-size: 15px;
+    margin: 15px 0 25px;
   }
 }
-.reset-pwd-content .form-group input {
-  padding: 14px 24px;
-  background: #ffffff;
-  border: 1px solid #dfdfdf;
-  border-radius: 10px;
-  display: block;
-  width: 100%;
-}
-@media (max-width: 767px) {
-  .reset-pwd-content .form-group input {
+@media (min-width: 768px) and (max-width: 991px) {
+  .coinsurf-signup .left-side p {
     font-size: 14px;
-    padding: 10px 16px;
+    margin: 15px 0 24px;
   }
 }
-.reset-pwd-content .form-group button[type=submit] {
-  padding: 17px 24px;
-  border-radius: 11px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 20px;
+.coinsurf-signup .left-side a {
+  padding: 10px 20px;
+  display: inline-block;
+}
+.coinsurf-signup .left-side a:hover {
+  color: #fff;
+}
+.coinsurf-signup .right-side {
+  background-image: linear-gradient(180deg, #284df3 0%, #718bff 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .coinsurf-signup .right-side {
+    padding: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .coinsurf-signup .right-side {
+    padding: 24px;
+  }
+}
+.coinsurf-signup .right-side img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.coinsurf-signup .right-side h1 {
+  font-size: 45px;
   color: #ffffff;
 }
-@media (max-width: 991px) {
-  .reset-pwd-content .form-group button[type=submit] {
-    font-size: 16px;
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .coinsurf-signup .right-side h1 {
+    font-size: 38px;
   }
 }
-@media (max-width: 767px) {
-  .reset-pwd-content .form-group button[type=submit] {
-    padding: 12px 16px;
+@media (min-width: 992px) and (max-width: 1200px) {
+  .coinsurf-signup .right-side h1 {
+    font-size: 32px;
   }
 }
-@media (max-width: 767px) {
-  .reset-pwd-content .form-footer {
+@media (min-width: 768px) and (max-width: 991px) {
+  .coinsurf-signup .right-side h1 {
+    font-size: 24px;
+  }
+}
+.coinsurf-signup .right-side h1 span {
+  color: #fecc15;
+}
+.coinsurf-signup .right-side .desc {
+  font-size: 25px;
+  color: #ffffff;
+  max-width: 610px;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .coinsurf-signup .right-side .desc {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .coinsurf-signup .right-side .desc {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .coinsurf-signup .right-side .desc {
+    font-size: 17px;
+  }
+}
+.coinsurf-signup .right-side .text {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  position: absolute;
+  bottom: 8%;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .coinsurf-signup .right-side .text {
+    font-size: 13px;
+    padding: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .coinsurf-signup .right-side .text {
     font-size: 14px;
+    padding: 0 24px;
   }
-}/*# sourceMappingURL=reset-pwd.css.map */
+}
+.coinsurf-signup .signup-mobile {
+  text-align: center;
+  background-image: linear-gradient(180deg, #284df3 0%, #718bff 100%);
+  padding: 40px 0;
+  height: calc(100vh - 70px);
+}
+@media (max-height: 600px) {
+  .coinsurf-signup .signup-mobile {
+    height: auto;
+  }
+}
+.coinsurf-signup .signup-mobile-content {
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0px 8px 44px rgba(0, 0, 0, 0.11);
+  border-radius: 20px;
+  padding: 36px 16px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.coinsurf-signup .signup-mobile-content h2 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #20244f;
+}
+.coinsurf-signup .signup-mobile-content p.desc {
+  font-size: 16px;
+  color: #5b5863;
+  margin-bottom: 36px;
+}
+.coinsurf-signup .signup-mobile-content p.text {
+  font-size: 16px;
+  color: #5b5863;
+  margin-top: 36px;
+}
+.coinsurf-signup .signup-mobile-content p.text a {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4263f6;
+}
+.coinsurf-signup .signup-mobile .footer-text {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 44px;
+  max-width: 350px;
+  margin: 44px auto 0;
+}/*# sourceMappingURL=signup.css.map */
