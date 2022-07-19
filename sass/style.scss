@@ -77,6 +77,7 @@ h6 {
   @media (min-width: 768px) and (max-width: 1200px) {
     font-size: 40px;
   }
+
   @media #{$mobile} {
     font-size: 28px;
   }
@@ -85,6 +86,7 @@ h6 {
 .section-text {
   font-weight: 500;
   font-size: 16px;
+
   @media #{$mobile} {
     font-weight: normal;
   }
@@ -106,7 +108,7 @@ header {
 
 // Navbar
 .navbar-nav .nav-link.active,
-.navbar-nav .show > .nav-link,
+.navbar-nav .show>.nav-link,
 .nav-link:focus,
 .nav-link:hover {
   color: #fff;
@@ -160,10 +162,12 @@ header {
   position: relative;
   z-index: 2;
   background: #4263f6;
+
   @media (min-width: 992px) {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(119.604px);
   }
+
   @media #{$maxTab} {
     position: fixed;
     width: 100%;
@@ -285,6 +289,7 @@ span.country-flag {
 .navbar-nav {
   @media #{$maxTab} {
     padding: 30px 0 0;
+
     .signup-link,
     .login-link {
       opacity: 1;
@@ -292,11 +297,13 @@ span.country-flag {
       border-radius: 63px;
       border: 1px solid #fff;
     }
+
     .about-us-link {
       border-bottom: 1px solid #6e83ff;
       padding-bottom: 20px;
       margin-bottom: 10px;
     }
+
     .signup-link {
       background-color: #fff;
       color: #1a3bcc;
@@ -317,6 +324,7 @@ span.country-flag {
   font-size: 0;
   transition: all 0.25s ease-in-out;
 }
+
 .menu-toggle:before,
 .menu-toggle:after {
   content: "";
@@ -338,9 +346,11 @@ button:hover {
 button.is-active {
   border-color: transparent;
 }
+
 button.is-active:before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
+
 button.is-active:after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
@@ -427,6 +437,7 @@ button {
 
       &:not(:last-child) {
         margin-right: 10px;
+
         @media #{$tablet} {
           margin-right: 5px;
         }
@@ -449,6 +460,23 @@ button {
       transform: translateX(0);
       margin-top: 40px;
     }
+
+    a {
+      span {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -1px;
+        color: #FFFFFF;
+        margin-right: 8px;
+        @media #{$tablet} {
+          font-size: 20px;
+        }
+        @media #{$mobile} {
+          font-size: 18px;
+        }
+      }
+    }
   }
 
   .shapes {
@@ -461,6 +489,7 @@ button {
       top: -15%;
       right: -22%;
       z-index: -1;
+
       @media (min-width: 768px) and (max-width: 1200px) {
         transform: scale(0.6);
         transform-origin: right top;
@@ -489,6 +518,7 @@ button {
 
     @media #{$betweentabdesk} {
       padding: 20px;
+
       svg {
         transform: scale(0.6);
         transform-origin: center;
@@ -504,6 +534,7 @@ button {
         width: 5px;
         height: 41px;
         top: 92%;
+
         @media #{$tablet} {
           display: none;
         }
@@ -527,6 +558,7 @@ button {
   line-height: 160%;
   text-align: center;
   margin-top: 50px;
+
   @media #{$betweentabdesk} {
     margin-top: 10px;
   }
@@ -612,6 +644,7 @@ button {
 
   .app-btns {
     margin-top: 50px;
+
     @media #{$mobile} {
       margin-top: 35px;
     }
@@ -623,6 +656,7 @@ button {
       border-radius: 8px;
       display: inline-block;
       transition: 0.2s;
+
       &:hover {
         background-color: #1a3bcc;
       }
@@ -679,6 +713,7 @@ button {
         @media #{$tablet} {
           font-size: 26px;
         }
+
         @media #{$mobile} {
           font-size: 20px;
         }
@@ -687,6 +722,7 @@ button {
       p {
         font-weight: 500;
         font-size: 16px;
+
         @media #{$mobile} {
           font-weight: 400;
         }
@@ -705,10 +741,12 @@ button {
     border-radius: 17px;
     padding: 50px 25px;
     transition: 0.2s;
+
     &:hover {
       background: #f9faff;
       box-shadow: 0px 74px 98px -3px rgba(55, 62, 131, 0.140946);
     }
+
     .icon {
       height: 82px;
       display: flex;
@@ -724,6 +762,7 @@ button {
     p {
       font-weight: 500;
       font-size: 16px;
+
       @media #{$mobile} {
         font-weight: 400;
       }
@@ -736,6 +775,21 @@ button {
       padding: 20px;
       border-radius: 8px;
       display: inline-block;
+
+      span {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -1px;
+        color: #000;
+        margin-right: 8px;
+        @media #{$tablet} {
+          font-size: 20px;
+        }
+        @media #{$mobile} {
+          font-size: 18px;
+        }
+      }
     }
   }
 }
@@ -778,6 +832,7 @@ footer {
 
   .btns {
     margin: 50px 0 100px;
+
     @media #{$mobile} {
       margin: 40px 0;
     }
@@ -816,13 +871,16 @@ footer {
     @media #{$maxTab} {
       margin-bottom: 50px;
     }
+
     &.fourth-col {
       @media #{$mobile} {
         display: flex;
+
         .top-col,
         .bottom-col {
           flex: 1;
         }
+
         .bottom-col {
           h5 {
             margin-top: 0;
@@ -832,8 +890,7 @@ footer {
     }
 
     .footer-logo {
-      margin-bottom: 70px;
-      display: block;
+      margin-bottom: 45px;
     }
 
     h5 {
@@ -853,19 +910,13 @@ footer {
     a {
       opacity: 0.6;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 16px;
+      font-size: 16px;
+      line-height: 24px;
       transition: 0.2s;
 
       &:hover {
         opacity: 1;
         color: #fff;
-      }
-    }
-
-    .links-list {
-      @media (min-width: 1000px) {
-        min-height: 345px;
       }
     }
 
@@ -878,8 +929,8 @@ footer {
 
       p {
         font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 24px;
 
         @media #{$betweentabdesk} {
           font-size: 14px;
@@ -932,12 +983,25 @@ footer {
       }
     }
 
+  }
+
+  .copyright {
+    margin-top: 50px;
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 0.6;
+    }
+
     .social-icons {
       li {
         display: inline-block;
 
         a {
-          opacity: 1;
+          transition: .2s;
+
           &:hover {
             opacity: 0.7;
           }
@@ -948,19 +1012,11 @@ footer {
         }
       }
     }
-  }
-
-  .copyright {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    opacity: 0.6;
-    margin-top: 50px;
-    text-align: center;
 
     @media #{$maxTab} {
       margin-top: 0;
     }
+
     @media #{$mobile} {
       font-size: 12px;
     }
@@ -988,6 +1044,7 @@ footer {
   @media #{$maxTab} {
     padding: 130px 0 40px;
   }
+
   .platforms {
     h5 {
       font-weight: 700;
@@ -1009,6 +1066,7 @@ footer {
       align-items: center;
       justify-content: space-between;
       margin-bottom: 70px;
+
       @media #{$mobile} {
         flex-direction: column;
         margin-bottom: 0;
@@ -1026,12 +1084,15 @@ footer {
         border: 1px solid transparent;
         border-radius: 41px;
         font-weight: 500;
+
         @media #{$tablet} {
           font-size: 14px;
         }
+
         @media #{$mobile} {
           width: 100%;
           padding: 12px 0;
+
           &:not(:last-of-type) {
             margin-bottom: 5px;
           }
@@ -1039,6 +1100,7 @@ footer {
 
         .icon {
           margin-right: 15px;
+
           @media #{$tablet} {
             margin-right: 10px;
           }
@@ -1066,6 +1128,7 @@ footer {
         &:hover {
           border: 1px solid #fff;
         }
+
         &.app:active {
           background: rgba(0, 0, 0, 0.05);
         }
@@ -1087,22 +1150,26 @@ footer {
     font-size: 53px;
     line-height: 140%;
     color: white;
+
     @media #{$betweentabdesk} {
       font-size: 50px;
     }
+
     @media #{$tablet} {
       font-size: 35px;
     }
+
     @media #{$mobile} {
       font-size: 25px;
     }
 
-    & + p {
+    &+p {
       font-weight: 500;
       font-size: 16px;
       line-height: 27px;
       color: white;
       margin: 15px 0 36px;
+
       @media #{$maxTab} {
         font-weight: normal;
       }
@@ -1111,12 +1178,15 @@ footer {
 
   .list {
     margin-bottom: 70px;
+
     @media #{$betweentabdesk} {
       margin-bottom: 40px;
     }
+
     @media #{$tablet} {
       margin-bottom: 30px;
     }
+
     @media #{$mobile} {
       width: fit-content;
       margin: 0 auto 40px;
@@ -1128,6 +1198,7 @@ footer {
       line-height: 18px;
       display: flex;
       align-items: center;
+
       @media #{$tablet} {
         font-size: 14px;
         font-weight: normal;
@@ -1135,6 +1206,7 @@ footer {
 
       &:not(:last-of-type) {
         margin-bottom: 20px;
+
         @media #{$tablet} {
           margin-bottom: 10px;
         }
@@ -1151,14 +1223,16 @@ footer {
   }
 
   .apps-download {
-    > div:not(:first-child) {
+    >div:not(:first-child) {
       display: none;
     }
+
     .image img {
       @media #{$tablet} {
         width: 180%;
         display: block;
       }
+
       @media #{$mobile} {
         max-width: 100%;
         display: block;
@@ -1209,6 +1283,7 @@ footer {
 // Trustpilot Widget
 .trustpilot-widget {
   padding: 80px 0;
+
   @media #{$maxTab} {
     padding: 50px 0;
   }
@@ -1222,12 +1297,15 @@ footer {
     font-weight: 700;
     font-size: 50px;
     line-height: 140%;
+
     @media #{$betweentabdesk} {
       font-size: 40px;
     }
+
     @media #{$tablet} {
       font-size: 32px;
     }
+
     @media #{$mobile} {
       font-size: 24px;
     }
@@ -1250,9 +1328,11 @@ footer {
     color: rgba(#20244f, 0.5);
     padding-top: 24px;
     padding-bottom: 24px;
+
     @media #{$mobile} {
       font-size: 14px;
     }
+
     &:hover {
       color: #20244f;
     }
@@ -1284,9 +1364,11 @@ footer {
   padding: 110px 0;
   position: relative;
   z-index: 1;
+
   @media #{$betweentabdesk} {
     padding: 60px 0;
   }
+
   @media #{$maxTab} {
     padding: 110px 0 50px;
   }
@@ -1296,18 +1378,21 @@ footer {
     font-size: 58px;
     line-height: 140%;
     color: #fff;
+
     @media #{$tablet} {
       font-size: 45px;
     }
+
     @media #{$mobile} {
       font-size: 28px;
     }
 
-    & + p {
+    &+p {
       font-weight: 500;
       font-size: 16px;
       line-height: 27px;
       color: #fff;
+
       @media #{$maxTab} {
         font-weight: normal;
       }
@@ -1320,9 +1405,11 @@ footer {
     @media #{$betweentabdesk} {
       margin-top: 70px;
     }
+
     @media #{$tablet} {
       margin-top: 50px;
     }
+
     @media #{$mobile} {
       margin-top: 30px;
     }
@@ -1333,15 +1420,19 @@ footer {
       border-radius: 17px;
       padding: 30px 24px;
       transition: 0.2s;
+
       @media #{$betweentabdesk} {
         padding: 24px 18px;
       }
+
       @media #{$mobile} {
         padding: 20px;
       }
+
       &:hover {
         background: #728cff;
         box-shadow: 0px 39px 86px rgba(26, 32, 88, 0.34), inset 0px 1px 1px rgba(255, 255, 255, 0.44485);
+
         p {
           opacity: 0.8;
         }
@@ -1353,10 +1444,12 @@ footer {
         line-height: 140%;
         color: #fff;
         margin: 35px 0;
+
         @media #{$betweentabdesk} {
           margin: 25px 0;
           font-size: 16px;
         }
+
         @media #{$mobile} {
           margin: 15px 0;
         }
@@ -1367,9 +1460,11 @@ footer {
         font-size: 16px;
         color: #ffffff;
         opacity: 0.5;
+
         @media #{$betweentabdesk} {
           font-weight: normal;
         }
+
         @media #{$mobile} {
           font-weight: normal;
           font-size: 14px;
@@ -1409,14 +1504,17 @@ footer {
       line-height: 140%;
       color: #000000;
       margin-bottom: 40px;
+
       @media #{$betweentabdesk} {
         font-size: 50px;
         margin-bottom: 30px;
       }
+
       @media #{$tablet} {
         margin-bottom: 30px;
         font-size: 40px;
       }
+
       @media #{$mobile} {
         font-size: 34px;
         margin-bottom: 24px;
@@ -1427,12 +1525,14 @@ footer {
       font-weight: 500;
       font-size: 14px;
       color: #000000;
+
       @media #{$mobile} {
         font-weight: normal;
       }
 
       &:not(:last-of-type) {
         margin-bottom: 30px;
+
         @media #{$betweentabdesk} {
           margin-bottom: 20px;
         }
@@ -1455,10 +1555,12 @@ footer {
       line-height: 140%;
       color: #20244f;
       margin-bottom: 40px;
+
       @media #{$tablet} {
         font-size: 40px;
         margin-bottom: 30px;
       }
+
       @media #{$mobile} {
         font-size: 30px;
         margin-bottom: 30px;
@@ -1469,10 +1571,12 @@ footer {
       li {
         &:not(:last-of-type) {
           margin-right: 25px;
+
           @media #{$maxTab} {
             margin-right: 5px;
           }
         }
+
         @media (max-width: 1200px) {
           margin: 0 5px 10px;
         }
@@ -1488,6 +1592,7 @@ footer {
           display: flex;
           align-items: center;
           justify-content: center;
+
           @media #{$mobile} {
             font-weight: 500;
             padding: 10px;
@@ -1495,6 +1600,7 @@ footer {
 
           svg {
             margin-right: 8px;
+
             @media #{$mobile} {
               margin-right: 5px;
             }
@@ -1528,6 +1634,7 @@ footer {
   .shape2 {
     position: absolute;
     z-index: -1;
+
     @media #{$mobile} {
       display: none;
     }
@@ -1536,10 +1643,12 @@ footer {
   .shape1 {
     left: -20%;
     top: 15%;
+
     @media #{$betweentabdesk} {
       left: -30%;
       top: 5%;
     }
+
     @media #{$tablet} {
       left: -40%;
       top: 35%;
@@ -1549,10 +1658,12 @@ footer {
   .shape2 {
     bottom: -30%;
     right: -19%;
+
     @media #{$betweentabdesk} {
       bottom: -20%;
       right: -40%;
     }
+
     @media #{$tablet} {
       display: none;
     }
