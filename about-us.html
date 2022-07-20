@@ -21,13 +21,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
     <!-- CSS only -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/about_us.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6ZQ5G9GBY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-V6ZQ5G9GBY");
+    </script>
   </head>
 
   <body>
     <!-- Start Header -->
-    <header class="homepage-header">
+    <header class="homepage-header aboutus-header">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a href="/">
@@ -45,7 +56,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/download.html">Download</a>
@@ -54,10 +65,10 @@
                 <a class="nav-link about-us-link active" href="/about-us.html">About us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link signup-link" href="#">Sign Up</a>
+                <a class="nav-link signup-link" href="/signup-windows.html">Sign Up</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link login-link" href="#">Log in</a>
+                <a class="nav-link login-link" href="/login.html">Log in</a>
               </li>
             </ul>
           </div>
@@ -78,7 +89,7 @@
             </div>
             <div class="col-md-6 order-1 order-md-2">
               <div class="image my-4 my-md-0">
-                <img class="img-fluid" src="imgs/about-us/hero-image.svg" alt="conisurf about-us image" />
+                <img width="578" height="257" class="img-fluid" src="imgs/about-us/hero-image.svg" alt="conisurf about-us image" />
               </div>
             </div>
           </div>
@@ -104,7 +115,7 @@
                     </svg>
 
                     <h3>Transparency</h3>
-                    <p>CoinSurf aims to bring true transparency to the proxy industry. We want users to know that they are running our application and how their unused internet is being utilized for ethical purposes by our verified customers. </p>
+                    <p>CoinSurf aims to bring true transparency to the proxy industry. We want users to know that they are running our application and how their unused internet is being utilized for ethical purposes by our verified customers.</p>
                   </div>
                 </div>
               </div>
@@ -153,13 +164,13 @@
             <div class="text">
               <h2>Our Story</h2>
               <p>The CoinSurf team consists mainly of engineers that felt a void in the bandwidth sharing industry which needed to be filled by a truly transparent and reliable platform. Although it may appear that some other names were reputable in the space, there were signs that made the CoinSurf team believe that they needed to introduce a new, safe, and honest bandwidth sharing platform.</p>
-              <p>At CoinSurf there were no shortcuts or avenues of funding which were provided to get the platform off the ground. Our passionate engineers spent time researching the needs of the industry and felt a need to give back to those who lacked adequate passive income streams. The team built CoinSurf as a bootstrap platform with a single goal in mind; to give community members an opportunity to earn truly passive income in a safe and reliable way. This is what CoinSurf is today.  </p>
-              <p>The entire team behind CoinSurf worked after hours to deploy the platform while also working full time at other organizations. Finally, CoinSurf is in a state where it can benefit those that the CoinSurf team wanted to help after nearly 12 months of development, deployments and beta testing. CoinSurf would not exist without the community of beta testers that allowed CoinSurf engineers to utilize their network free of charge during the beta testing phase. The collaboration of our team with the community, made the difference that brings you CoinSurf as it is today. We intend to continue collaborating with the new community members to bring forward new features, earning opportunities, and software upgrades that can optimize the CoinSurf platform. </p>
+              <p>At CoinSurf there were no shortcuts or avenues of funding which were provided to get the platform off the ground. Our passionate engineers spent time researching the needs of the industry and felt a need to give back to those who lacked adequate passive income streams. The team built CoinSurf as a bootstrap platform with a single goal in mind; to give community members an opportunity to earn truly passive income in a safe and reliable way. This is what CoinSurf is today.</p>
+              <p>The entire team behind CoinSurf worked after hours to deploy the platform while also working full time at other organizations. Finally, CoinSurf is in a state where it can benefit those that the CoinSurf team wanted to help after nearly 12 months of development, deployments and beta testing. CoinSurf would not exist without the community of beta testers that allowed CoinSurf engineers to utilize their network free of charge during the beta testing phase. The collaboration of our team with the community, made the difference that brings you CoinSurf as it is today. We intend to continue collaborating with the new community members to bring forward new features, earning opportunities, and software upgrades that can optimize the CoinSurf platform.</p>
             </div>
           </div>
           <div class="col-lg-5 order-1 order-lg-2">
             <div class="image mb-5 mb-lg-0 text-lg-end">
-              <img src="imgs/about-us/story.svg" class="img-fluid" alt="our story image" />
+              <img width="336" height="335" src="imgs/about-us/story.svg" class="img-fluid" alt="our story image" />
             </div>
           </div>
         </div>
@@ -289,12 +300,12 @@
           <ul class="social-icons mb-4 mb-md-0">
             <li>
               <a href="#">
-                <img class="img-fluid" src="imgs/homepage/twitter.svg" alt="twitter" />
+                <img width="21" height="18" class="img-fluid" src="imgs/homepage/twitter.svg" alt="twitter" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img class="img-fluid" src="imgs/homepage/discord.svg" alt="discord" />
+                <img width="26" height="20" class="img-fluid" src="imgs/homepage/discord.svg" alt="discord" />
               </a>
             </li>
           </ul>
@@ -302,7 +313,6 @@
       </div>
     </footer>
 
-    
     <script src="js/jquery-3.6.0.min.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="js/bootstrap.bundle.min.js"></script>

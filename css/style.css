@@ -110,10 +110,12 @@ button {
 
 .main-btn:hover {
   background: #0b34e9;
+  color: #fff;
 }
 
 .main-btn:active {
   background: #8399f9;
+  color: #fff;
 }
 
 header.homepage-header {
@@ -131,7 +133,11 @@ header.homepage-header {
   }
 }
 
-header.header-white {
+header.aboutus-header {
+  height: auto;
+}
+
+header.header-white .navbar {
   border-bottom: 1px solid rgba(66, 99, 246, 0.19);
 }
 header.header-white button:hover {
@@ -239,6 +245,14 @@ header.header-white .nav-link:not(.dropdown-toggle)::after {
     width: 100%;
     top: 0;
   }
+}
+
+header.header-blue .navbar-expand-lg {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.19);
+  position: relative;
+  z-index: 2;
+  background: #4263f6;
 }
 
 button:focus:not(:focus-visible) {
@@ -388,10 +402,6 @@ span.country-flag.bg-gr {
   transition: transform 0.25s ease-in-out;
 }
 
-button:hover {
-  color: #fff;
-}
-
 button.is-active {
   border-color: transparent;
 }
@@ -412,7 +422,7 @@ button.is-active:after {
 
 footer {
   background: linear-gradient(180deg, #120f33 0%, #20244f 100%);
-  padding: 100px 0 50px;
+  padding: 80px 0 40px;
   color: white;
   position: relative;
   z-index: 1;
@@ -444,7 +454,7 @@ footer p {
   color: white;
 }
 footer .btns {
-  margin: 50px 0 100px;
+  margin: 40px 0 80px;
 }
 @media (max-width: 767px) {
   footer .btns {
@@ -599,7 +609,9 @@ footer .footer-col form input::placeholder {
   color: rgba(255, 255, 255, 0.43);
 }
 footer .copyright {
-  margin-top: 50px;
+  margin-top: 20px;
+  border-top: 1px solid #333052;
+  padding-top: 15px;
 }
 footer .copyright p {
   font-size: 14px;

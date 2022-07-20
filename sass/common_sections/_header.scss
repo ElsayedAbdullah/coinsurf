@@ -12,8 +12,14 @@ header.homepage-header {
   }
 }
 
+header.aboutus-header {
+  height: auto;
+}
+
 header.header-white {
-  border-bottom: 1px solid rgba(#4263f6, 0.19);
+  .navbar {
+    border-bottom: 1px solid rgba(#4263f6, 0.19);
+  }
   button:hover {
     color: #20244f;
   }
@@ -121,6 +127,15 @@ header.header-white {
     position: fixed;
     width: 100%;
     top: 0;
+  }
+}
+header.header-blue {
+  .navbar-expand-lg {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.19);
+    position: relative;
+    z-index: 2;
+    background: #4263f6;
   }
 }
 
@@ -286,10 +301,6 @@ span.country-flag {
   background: currentColor;
   transform: translate(-50%, -50%);
   transition: transform 0.25s ease-in-out;
-}
-
-button:hover {
-  color: #fff;
 }
 
 button.is-active {

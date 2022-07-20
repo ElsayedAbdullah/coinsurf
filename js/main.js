@@ -12,13 +12,14 @@ $(document).ready(function () {
     $("body").toggleClass("overlay");
   });
 
+  // updating the year on footer
+  $("#year-now").text(new Date().getFullYear());
+
   // load the common section in the website
-  $("div[data-load]").each(function () {
-    $(this).load($(this).data("load"), function () {
-      // make updating the year on footer
-      // $("#year-now").text(new Date().getFullYear());
-    });
-  });
+  // $("div[data-load]").each(function () {
+  //   $(this).load($(this).data("load"), function () {
+  //   });
+  // });
 
   // add class active when click on items on sidebar and moving to the right content
   $(".dashboard-items ul li").on("click", function () {

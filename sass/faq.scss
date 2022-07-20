@@ -1,0 +1,180 @@
+// variables
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 991px)";
+$maxTab: "(max-width: 991px)";
+$betweentabdesk: "(min-width: 992px) and (max-width: 1200px)";
+$primaryColor: "#20244f";
+
+// import common sections styles
+@import "./common_sections/global";
+@import "./common_sections/header";
+@import "./common_sections/footer";
+
+.faq-hero {
+  padding: 40px 0;
+  background-image: url(../imgs/faq/faq-label.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  @media #{$mobile} {
+    background-position: top;
+    background-size: contain;
+  }
+  .text {
+    text-align: center;
+    h3 {
+      font-weight: 500;
+      font-size: 24px;
+      letter-spacing: -1px;
+      color: #9fa1b8;
+      font-style: italic;
+      @media #{$mobile} {
+        font-size: 16px;
+      }
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 55px;
+      letter-spacing: -1px;
+      color: #20244f;
+      margin: 7px 0 23px;
+      @media #{$tablet} {
+        font-size: 34px;
+      }
+      @media #{$mobile} {
+        margin: 16px 0 24px;
+        font-size: 24px;
+      }
+    }
+    .desc {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #9fa1b8;
+      margin-bottom: 25px;
+      @media #{$mobile} {
+        font-size: 14px;
+      }
+    }
+    .search {
+      padding: 16px 24px;
+      background: #ffffff;
+      border: 1px solid #cbd1eb;
+      border-radius: 55px;
+      max-width: 550px;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      @media #{$mobile} {
+        padding: 12px 24px;
+      }
+      input {
+        width: 100%;
+        border: 0;
+        outline: none;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+        color: #20244f;
+      }
+      .search-icon {
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+.coniserf-faq {
+  .accordion-button:not(.collapsed) {
+    color: #4263f6;
+    background-color: #eff2ff;
+    .icon {
+      svg {
+        path {
+          fill: #4263f6;
+        }
+      }
+    }
+  }
+  .accordion-item {
+    background: rgba(255, 255, 255, 0.478424);
+    border: 1px solid #d1d5e2;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .accordion-button {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(#20244f, 0.5);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background: #f8f8fa;
+    @media #{$maxTab} {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &:hover {
+      color: #20244f;
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #4263f6;
+
+    .icon svg path {
+      fill: #4263f6;
+    }
+  }
+
+  .accordion-body {
+    font-size: 16px;
+    color: rgba(#20244f, 0.85);
+    padding: 20px 60px;
+    background-color: #fff;
+
+    @media #{$maxTab} {
+      font-size: 14px;
+      padding: 20px;
+    }
+  }
+}
+
+.more-questions {
+  text-align: center;
+  .more-questions-content {
+    @media #{$mobile} {
+      display: flex;
+      flex-direction: column;
+      .text {
+        order: 2;
+        margin-top: 40px;
+      }
+    }
+  }
+  h2 {
+    font-size: 55px;
+    @media #{$tablet} {
+      font-size: 34px;
+    }
+    @media #{$mobile} {
+      font-size: 24px;
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    max-width: 530px;
+    margin: 8px auto 50px;
+    @media #{$mobile} {
+      margin: 8px auto 0;
+    }
+  }
+}
