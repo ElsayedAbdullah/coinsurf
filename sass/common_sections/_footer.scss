@@ -210,9 +210,10 @@ footer {
 
         a {
           transition: 0.2s;
+          opacity: .7;
 
           &:hover {
-            opacity: 0.7;
+            opacity: 1;
           }
         }
 

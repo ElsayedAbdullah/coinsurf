@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
   // switch between app tutorials on download page
   $(".app-hero .platforms ul li.app").on("click", function () {
     $(this).addClass("active").siblings().removeClass("active");
@@ -13,10 +13,10 @@ $(function () {
   });
 
   // load the common section in the website
-  $("[data-load]").each(function () {
+  $("div[data-load]").each(function () {
     $(this).load($(this).data("load"), function () {
       // make updating the year on footer
-      $("#year-now").text(new Date().getFullYear());
+      // $("#year-now").text(new Date().getFullYear());
     });
   });
 
@@ -33,15 +33,6 @@ $(function () {
     $($(this).data("content")).fadeIn();
     $(".page-title").html($(this).html());
   });
-
-  //fixed navbar when scrolling
-  // $(".dashboard-main .main-content").on("scroll", function () {
-  //   if ($(this).scrollTop() > 60) {
-  //     $(".overview .overview-info").addClass("sticky");
-  //   } else {
-  //     $(".overview .overview-info").removeClass("sticky");
-  //   }
-  // });
 
   // toggle between payment methods
   $(".payment--method .label-radio").on("click", function () {
@@ -94,4 +85,46 @@ $(function () {
     $("aside .aside-content").addClass("show");
     $("body").addClass("overlay");
   });
+
+  // Detect the OS
+  function getOS() {
+    var userAgent = window.navigator.userAgent,
+      platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
+      macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
+      windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
+
+    if (macosPlatforms.indexOf(platform) !== -1) {
+      $(".signup-link").href("/signup-mac.html");
+      $(".apps-download .windows-app").hide();
+      $(".apps-download .mac-app").show();
+      $("#windows-tab").removeClass("active");
+      $("#mac-tab").addClass("active");
+    } else if (windowsPlatforms.indexOf(platform) !== -1) {
+      $(".signup-link").attr("href", "/signup-windows.html");
+      $(".apps-download .mac-app").hide();
+      $(".apps-download .windows-app").show();
+      $("#windows-tab").addClass("active");
+      $("#mac-tab").removeClass("active");
+    }
+  }
+  getOS();
+
+  // checking email validation
+  function validateEmail(email) {
+    let re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+
+  $('.coinsurf-login #email').on('keyup', function () {
+    if($(this).val()) {
+      let valid = validateEmail($(this).val())
+      if(valid) {
+        $(this).addClass('valid').removeClass('invalid')
+      } else {
+        $(this).removeClass('valid').addClass('invalid')
+      }
+    } else {
+      $(this).removeClass('invalid')
+    }
+  })
 });

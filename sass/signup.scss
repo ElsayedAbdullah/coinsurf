@@ -9,18 +9,6 @@ $primaryColor: "#20244f";
 @import "./common_sections/global";
 @import "./common_sections/header";
 
-.header-white {
-  .navbar-nav .nav-link.active,
-  .navbar-nav .show > .nav-link,
-  .nav-link:focus,
-  .nav-link:hover {
-    color: #4263f6;
-  }
-
-  .nav-link:not(.dropdown-toggle)::after {
-    background-color: #4263f6;
-  }
-}
 .coinsurf-signup {
   height: calc(100vh - 70px);
   @media #{$mobile} {
@@ -45,9 +33,6 @@ $primaryColor: "#20244f";
     align-items: center;
     justify-content: center;
     padding: 50px;
-    @media #{$betweentabdesk} {
-      padding: 32px;
-    }
     @media #{$tablet} {
       padding: 24px;
     }
@@ -85,9 +70,6 @@ $primaryColor: "#20244f";
   }
   .right-side {
     background-image: linear-gradient(180deg, #284df3 0%, #718bff 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     text-align: center;
     display: flex;
     align-items: center;
@@ -198,9 +180,8 @@ $primaryColor: "#20244f";
     .footer-text {
       font-size: 14px;
       color: #ffffff;
-      margin-top: 44px;
       max-width: 350px;
-      margin: 44px auto 0;
+      margin: 32px auto 0;
     }
   }
 }

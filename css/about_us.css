@@ -150,7 +150,7 @@ header.header-white .nav-link:hover {
 }
 @media (max-width: 991px) {
   header.header-white {
-    height: 70px;
+    height: 65px;
   }
   header.header-white .navbar-nav .signup-link,
 header.header-white .navbar-nav .login-link {
@@ -162,6 +162,15 @@ header.header-white .navbar-nav .login-link {
     background-color: #1a3bcc;
     color: #fff !important;
   }
+}
+header.header-white .navbar-nav .nav-link.active,
+header.header-white .navbar-nav .show > .nav-link,
+header.header-white .nav-link:focus,
+header.header-white .nav-link:hover {
+  color: #4263f6;
+}
+header.header-white .nav-link:not(.dropdown-toggle)::after {
+  background-color: #4263f6;
 }
 
 .navbar-nav .nav-link.active,
@@ -218,6 +227,7 @@ header.header-white .navbar-nav .login-link {
 }
 @media (min-width: 992px) {
   .navbar-expand-lg {
+    padding: 15px 0;
     background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(119.604px);
             backdrop-filter: blur(119.604px);
@@ -606,9 +616,10 @@ footer .copyright .social-icons li {
 }
 footer .copyright .social-icons li a {
   transition: 0.2s;
+  opacity: 0.7;
 }
 footer .copyright .social-icons li a:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 footer .copyright .social-icons li:not(:last-child) {
   margin-right: 24px;

@@ -150,7 +150,7 @@ header.header-white .nav-link:hover {
 }
 @media (max-width: 991px) {
   header.header-white {
-    height: 70px;
+    height: 65px;
   }
   header.header-white .navbar-nav .signup-link,
 header.header-white .navbar-nav .login-link {
@@ -162,6 +162,15 @@ header.header-white .navbar-nav .login-link {
     background-color: #1a3bcc;
     color: #fff !important;
   }
+}
+header.header-white .navbar-nav .nav-link.active,
+header.header-white .navbar-nav .show > .nav-link,
+header.header-white .nav-link:focus,
+header.header-white .nav-link:hover {
+  color: #4263f6;
+}
+header.header-white .nav-link:not(.dropdown-toggle)::after {
+  background-color: #4263f6;
 }
 
 .navbar-nav .nav-link.active,
@@ -218,6 +227,7 @@ header.header-white .navbar-nav .login-link {
 }
 @media (min-width: 992px) {
   .navbar-expand-lg {
+    padding: 15px 0;
     background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(119.604px);
             backdrop-filter: blur(119.604px);
@@ -400,16 +410,6 @@ button.is-active:after {
   }
 }
 
-.header-white .navbar-nav .nav-link.active,
-.header-white .navbar-nav .show > .nav-link,
-.header-white .nav-link:focus,
-.header-white .nav-link:hover {
-  color: #4263f6;
-}
-.header-white .nav-link:not(.dropdown-toggle)::after {
-  background-color: #4263f6;
-}
-
 .coinsurf-signup {
   height: calc(100vh - 70px);
 }
@@ -441,11 +441,6 @@ button.is-active:after {
   align-items: center;
   justify-content: center;
   padding: 50px;
-}
-@media (min-width: 992px) and (max-width: 1200px) {
-  .coinsurf-signup .left-side {
-    padding: 32px;
-  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .coinsurf-signup .left-side {
@@ -493,9 +488,6 @@ button.is-active:after {
 }
 .coinsurf-signup .right-side {
   background-image: linear-gradient(180deg, #284df3 0%, #718bff 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   text-align: center;
   display: flex;
   align-items: center;
@@ -627,7 +619,6 @@ button.is-active:after {
 .coinsurf-signup .signup-mobile .footer-text {
   font-size: 14px;
   color: #ffffff;
-  margin-top: 44px;
   max-width: 350px;
-  margin: 44px auto 0;
+  margin: 32px auto 0;
 }/*# sourceMappingURL=signup.css.map */

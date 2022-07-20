@@ -29,7 +29,7 @@ header.header-white {
     }
   }
   @media #{$maxTab} {
-    height: 70px;
+    height: 65px;
     .navbar-nav .signup-link,
     .navbar-nav .login-link {
       border: 1px solid #1a3bcc;
@@ -40,6 +40,17 @@ header.header-white {
       background-color: #1a3bcc;
       color: #fff !important;
     }
+  }
+
+  .navbar-nav .nav-link.active,
+  .navbar-nav .show > .nav-link,
+  .nav-link:focus,
+  .nav-link:hover {
+    color: #4263f6;
+  }
+
+  .nav-link:not(.dropdown-toggle)::after {
+    background-color: #4263f6;
   }
 }
 
@@ -101,6 +112,7 @@ header.header-white {
   background: #4263f6;
 
   @media (min-width: 992px) {
+    padding: 15px 0;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(119.604px);
   }

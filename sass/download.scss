@@ -1,0 +1,337 @@
+// variables
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 991px)";
+$maxTab: "(max-width: 991px)";
+$betweentabdesk: "(min-width: 992px) and (max-width: 1200px)";
+$primaryColor: "#20244f";
+
+// import common sections styles
+@import "./common_sections/global";
+@import "./common_sections/header";
+@import "./common_sections/footer";
+
+// Download Apps Page
+.app-hero {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 50px 0;
+
+  @media (min-width: 1600px) {
+    height: calc(100% - 80px);
+  }
+
+  @media #{$maxTab} {
+    padding: 130px 0 40px;
+  }
+
+  .platforms {
+    h5 {
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 140%;
+      color: #ffffff;
+      margin-bottom: 20px;
+
+      @media #{$mobile} {
+        font-size: 28px;
+      }
+    }
+
+    ul {
+      background: rgba(32, 36, 79, 0.22);
+      border-radius: 34px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      @media #{$mobile} {
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+
+      li {
+        width: 33%;
+        padding: 17px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        border: 1px solid transparent;
+        border-radius: 41px;
+        font-weight: 500;
+
+        @media #{$tablet} {
+          font-size: 14px;
+        }
+
+        @media #{$mobile} {
+          width: 100%;
+          padding: 12px 0;
+
+          &:not(:last-of-type) {
+            margin-bottom: 5px;
+          }
+        }
+
+        .icon {
+          margin-right: 15px;
+
+          @media #{$tablet} {
+            margin-right: 10px;
+          }
+
+          svg {
+            display: block;
+
+            path {
+              transition: 0.3s;
+            }
+          }
+        }
+
+        &.active {
+          background: #f2f2f2;
+          color: #20244f;
+
+          svg {
+            path {
+              fill: #20244f;
+            }
+          }
+        }
+
+        &:hover {
+          border: 1px solid #fff;
+        }
+
+        &.app:active {
+          background: rgba(0, 0, 0, 0.05);
+        }
+
+        &.disabled {
+          opacity: 0.5;
+
+          &:hover {
+            border: transparent;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 53px;
+    line-height: 140%;
+    color: white;
+
+    @media #{$betweentabdesk} {
+      font-size: 50px;
+    }
+
+    @media #{$tablet} {
+      font-size: 35px;
+    }
+
+    @media #{$mobile} {
+      font-size: 25px;
+    }
+
+    & + p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 27px;
+      color: white;
+      margin: 15px 0 36px;
+
+      @media #{$maxTab} {
+        font-weight: normal;
+      }
+    }
+  }
+
+  .list {
+    margin-bottom: 40px;
+
+    @media #{$tablet} {
+      margin-bottom: 30px;
+    }
+
+    @media #{$mobile} {
+      width: fit-content;
+      margin: 0 auto 40px;
+    }
+
+    li {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+
+      @media #{$tablet} {
+        font-size: 14px;
+        font-weight: normal;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+
+        @media #{$tablet} {
+          margin-bottom: 10px;
+        }
+      }
+
+      p {
+        color: white;
+      }
+
+      svg {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .apps-download {
+    > div:not(:first-child) {
+      display: none;
+    }
+
+    .image img {
+      @media #{$tablet} {
+        width: 180%;
+        display: block;
+      }
+
+      @media #{$mobile} {
+        max-width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  .download-btn {
+    a {
+      color: #20244f;
+      background: #ffffff;
+      border-radius: 7.21739px;
+      padding: 14px 0;
+      font-weight: 500;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      color: #ffffff;
+      opacity: 0.5;
+    }
+  }
+
+  .app-devices {
+    padding-top: 60px;
+
+    ul {
+      li {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+
+        p {
+          color: white;
+          opacity: 0.6;
+        }
+
+        &:not(:last-of-type) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Trustpilot Widget
+.trustpilot-widget {
+  padding: 80px 0;
+
+  @media #{$maxTab} {
+    padding: 50px 0;
+  }
+}
+
+.faq {
+  padding: 60px 0;
+  background: #eceffa;
+
+  .faq-title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 140%;
+
+    @media #{$betweentabdesk} {
+      font-size: 40px;
+    }
+
+    @media #{$tablet} {
+      font-size: 32px;
+    }
+
+    @media #{$mobile} {
+      font-size: 24px;
+    }
+  }
+
+  .accordion-item {
+    background: rgba(255, 255, 255, 0.478424);
+    border: 1px solid #d1d5e2;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .accordion-button {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(#20244f, 0.5);
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @media #{$mobile} {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: #20244f;
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #4263f6;
+
+    .icon svg path {
+      fill: #4263f6;
+    }
+  }
+
+  .accordion-body {
+    font-size: 16px;
+    color: rgba(#20244f, 0.7);
+    padding: 20px 60px;
+    background-color: #fff;
+
+    @media #{$mobile} {
+      font-size: 14px;
+      padding: 20px 50px;
+    }
+  }
+}
