@@ -495,18 +495,6 @@ footer .btns a:not(:last-child) {
     margin-bottom: 50px;
   }
 }
-@media (max-width: 767px) {
-  footer .footer-col.fourth-col {
-    display: flex;
-  }
-  footer .footer-col.fourth-col .top-col,
-footer .footer-col.fourth-col .bottom-col {
-    flex: 1;
-  }
-  footer .footer-col.fourth-col .bottom-col h5 {
-    margin-top: 0;
-  }
-}
 footer .footer-col .footer-logo {
   margin-bottom: 45px;
 }

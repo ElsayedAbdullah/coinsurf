@@ -76,23 +76,6 @@ footer {
       margin-bottom: 50px;
     }
 
-    &.fourth-col {
-      @media #{$mobile} {
-        display: flex;
-
-        .top-col,
-        .bottom-col {
-          flex: 1;
-        }
-
-        .bottom-col {
-          h5 {
-            margin-top: 0;
-          }
-        }
-      }
-    }
-
     .footer-logo {
       margin-bottom: 45px;
     }
