@@ -716,6 +716,8 @@ footer .copyright .social-icons li:not(:last-child) {
   position: relative;
   display: flex;
   align-items: center;
+  /* clears the 'X' from Internet Explorer */
+  /* clears the 'X' from Chrome */
 }
 @media (max-width: 767px) {
   .faq-hero .text .search {
@@ -733,6 +735,18 @@ footer .copyright .social-icons li:not(:last-child) {
 }
 .faq-hero .text .search .search-icon {
   margin-right: 12px;
+}
+.faq-hero .text .search input[type=search]::-ms-clear,
+.faq-hero .text .search input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.faq-hero .text .search input[type=search]::-webkit-search-decoration,
+.faq-hero .text .search input[type=search]::-webkit-search-cancel-button,
+.faq-hero .text .search input[type=search]::-webkit-search-results-button,
+.faq-hero .text .search input[type=search]::-webkit-search-results-decoration {
+  display: none;
 }
 
 .coniserf-faq .accordion-button:not(.collapsed) {
