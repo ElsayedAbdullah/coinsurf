@@ -116,25 +116,61 @@ $(document).ready(function () {
     return re.test(email);
   }
 
-  $('.coinsurf-login #email').on('keyup', function () {
-    if($(this).val()) {
-      let valid = validateEmail($(this).val())
-      if(valid) {
-        $(this).addClass('valid').removeClass('invalid')
+  $(".coinsurf-login #email").on("keyup", function () {
+    if ($(this).val()) {
+      let valid = validateEmail($(this).val());
+      if (valid) {
+        $(this).addClass("valid").removeClass("invalid");
       } else {
-        $(this).removeClass('valid').addClass('invalid')
+        $(this).removeClass("valid").addClass("invalid");
       }
     } else {
-      $(this).removeClass('invalid')
+      $(this).removeClass("invalid");
     }
-  })
+  });
 
   // Search Function on FAQ Page
   $("#accordion_search_bar").on("keyup", function () {
     var value = $(this).val().toLowerCase();
     $("#accordionFaq > .accordion-item").filter(function () {
-      $(this)
-        .toggle($(this).text().toLowerCase().indexOf(value) > -1);
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });
+  });
+
+  // validation for the email input when sending the invite
+  var inviteEmail = $("#invite-email");
+  var inviteEmailError = true;
+
+  // validate the email when blur the email input field
+  inviteEmail.on("keyup", function () {
+    if (inviteEmail.val() != "") {
+      if (!validateEmail(inviteEmail.val()) || inviteEmail.val() == "") {
+        $(this).addClass("invalid");
+        inviteEmailError = true;
+      } else {
+        $(this).removeClass("invalid");
+        inviteEmailError = false;
+      }
+    } else {
+      $(this).removeClass("invalid");
+    }
+  });
+
+  // sending invitation state
+  $("#invite-form").on("submit", function (e) {
+    e.preventDefault();
+    if (inviteEmailError == true) {
+      $("#invite-form .error").show().delay(3000).fadeOut();
+    } else {
+      $("#send-invite").addClass("invite-sent").html(`
+      <svg class="me-2" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/  svg">
+        <path d="M2 6L6.5 10L14 2" stroke="#20244f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Invite sent</span>`);
+      setTimeout(function () {
+        $("#send-invite").removeClass("invite-sent").text("Send Invite");
+        inviteEmail.val("");
+      }, 2000);
+    }
   });
 });

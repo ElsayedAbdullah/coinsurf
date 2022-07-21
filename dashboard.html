@@ -376,9 +376,12 @@
                       <div class="col-md-7 col-lg-6">
                         <div class="send-invite">
                           <p>Invite your friends and you can earn an extra $5 bonus!</p>
-                          <form>
-                            <input type="email" class="email me-3" name="email" id="invite-email" placeholder="Enter email adress" />
-                            <button type="submit">Send Invite</button>
+                          <form id="invite-form">
+                            <div class="form-group">
+                              <input type="email" class="email me-3" name="email" id="invite-email" placeholder="Enter email adress" />
+                              <div class="error text-white mt-2">Invalid Email*</div>
+                            </div>
+                            <button type="submit" id="send-invite">Send Invite</button>
                           </form>
                         </div>
                       </div>

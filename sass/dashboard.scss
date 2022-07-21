@@ -993,8 +993,11 @@ aside {
 
       form {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-end;
+        .error {
+          display: none;
+        }
 
         input,
         button {
@@ -1010,12 +1013,15 @@ aside {
           transition: 0.2s;
           outline: none;
         }
-
         button:hover {
           background: #c0cbfb;
         }
 
         input {
+          border: 1px solid transparent;
+          &.invalid {
+            border: 1px solid #f00;
+          }
           &::placeholder {
             color: rgba(#20244f, 0.5);
           }

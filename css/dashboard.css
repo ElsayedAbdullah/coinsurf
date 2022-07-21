@@ -864,8 +864,11 @@ aside .page-title p {
 }
 .overview-body .referral-code .send-invite form {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
+}
+.overview-body .referral-code .send-invite form .error {
+  display: none;
 }
 .overview-body .referral-code .send-invite form input,
 .overview-body .referral-code .send-invite form button {
@@ -883,6 +886,12 @@ aside .page-title p {
 }
 .overview-body .referral-code .send-invite form button:hover {
   background: #c0cbfb;
+}
+.overview-body .referral-code .send-invite form input {
+  border: 1px solid transparent;
+}
+.overview-body .referral-code .send-invite form input.invalid {
+  border: 1px solid #f00;
 }
 .overview-body .referral-code .send-invite form input::-moz-placeholder {
   color: rgba(32, 36, 79, 0.5);
