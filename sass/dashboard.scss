@@ -216,7 +216,6 @@ aside {
     .dashboard-items {
       height: 100%;
     }
-
   }
 
   .aside-content {
@@ -365,7 +364,6 @@ aside {
 
     li {
       svg {
-
         g,
         path {
           transition: 0.2s;
@@ -374,12 +372,10 @@ aside {
 
       &:not(:last-of-type) {
         margin-right: 20px;
-
       }
 
       &:hover {
         svg {
-
           g,
           path {
             opacity: 1;
@@ -501,7 +497,7 @@ aside {
     }
 
     .dashboard-content {
-      >div {
+      > div {
         padding: 6rem 0;
 
         @media (min-width: 992px) and (max-width: 1400px) {
@@ -509,7 +505,7 @@ aside {
         }
       }
 
-      >div:not(:first-child) {
+      > div:not(:first-child) {
         display: none;
       }
     }
@@ -592,6 +588,7 @@ aside {
         @media #{$mobile} {
           width: 100%;
           justify-content: space-between;
+          flex-wrap: wrap;
         }
       }
 
@@ -601,15 +598,37 @@ aside {
           border: 1px solid rgba(66, 99, 246, 0.48838);
           border-radius: 9px;
           padding: 12px 20px;
+          margin-right: 1.6rem;
+          display: flex;
+          align-items: center;
           font-weight: 700;
           font-size: 20px;
           line-height: 2.3rem;
-          color: #4263f6;
-          display: inline-block;
-          margin-right: 1.6rem;
-
+          
           .usd {
             color: #20244f;
+            margin-right: 5px;
+          }
+          .amount-input {
+            border: 0;
+            font-weight: 700;
+            color: #4263f6;
+            outline: none;
+            background: none;
+            max-width: 70px;
+            &::placeholder {
+              color: #5f638f;
+              opacity: .4;
+            }
+          }
+          input[type="number"]::-webkit-inner-spin-button,
+          input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          input[type="number"] {
+            -moz-appearance: textfield;
           }
         }
       }
@@ -645,7 +664,7 @@ aside {
         border-radius: 9px;
         background: #ffffff;
         border: 1px solid #dddde1;
-        padding: 1.6rem;
+        padding: 1.6rem 48px 1.6em 1.6em;
         display: block;
         cursor: pointer;
       }
@@ -658,7 +677,7 @@ aside {
         width: 3.2rem;
         height: 3.2rem;
 
-        &:checked+label {
+        &:checked + label {
           background: #f4f5fb;
           border: 1px solid #4263f6;
         }
@@ -679,6 +698,7 @@ aside {
         line-height: 2.1rem;
         color: #20244f;
         opacity: 0.5;
+        word-break: break-word;
       }
     }
   }
@@ -706,7 +726,7 @@ aside {
       display: none;
     }
 
-    .top-overview div>span {
+    .top-overview div > span {
       font-size: 2.9rem;
       line-height: 3.4rem;
     }
@@ -818,7 +838,7 @@ aside {
     line-height: 2.5rem;
   }
 
-  div>span {
+  div > span {
     font-weight: 900;
     font-size: 4rem;
   }
@@ -1096,7 +1116,7 @@ aside {
           line-height: 3rem;
           margin: 0 0 1rem;
 
-          @media (min-width:768px) and (max-width: 1200px) {
+          @media (min-width: 768px) and (max-width: 1200px) {
             font-size: 3rem;
           }
         }
@@ -1279,7 +1299,7 @@ aside {
     margin: 0 1rem 0 0;
     cursor: pointer;
 
-    &:checked+label {
+    &:checked + label {
       opacity: 1;
     }
   }
@@ -1295,7 +1315,6 @@ aside {
   }
 
   .payment {
-
     .payment-info,
     .payment-options {
       background: #ffffff;
@@ -1334,7 +1353,7 @@ aside {
         }
 
         .email {
-          @media (min-width:1400px) and (max-width: 1600px) {
+          @media (min-width: 1400px) and (max-width: 1600px) {
             flex-direction: column;
           }
 
@@ -1355,7 +1374,6 @@ aside {
               margin-right: 0;
               margin-bottom: 10px;
             }
-
           }
 
           button {
@@ -1443,7 +1461,7 @@ aside {
 
       @media #{$mobile} {
         text-align: left;
-        background: #DBDDEF;
+        background: #dbddef;
         border: 1.13333px solid rgba(186, 189, 222, 0.348027);
         border-radius: 10px;
         position: static;
@@ -1580,8 +1598,8 @@ aside {
       flex-wrap: wrap;
 
       @media #{$mobile} {
-        background: #FFFFFF;
-        border: 1.13333px solid #DDDDE1;
+        background: #ffffff;
+        border: 1.13333px solid #dddde1;
         border-radius: 10px;
         padding: 16px;
       }
@@ -1664,7 +1682,7 @@ aside {
           width: 100%;
           text-align: left;
           padding-top: 16px;
-          border-top: 1px solid #E3E3E3;
+          border-top: 1px solid #e3e3e3;
           margin-top: 16px;
           font-size: 26px;
         }
@@ -1676,7 +1694,6 @@ aside {
 // transaction-history
 .transaction-history,
 .referrals-history {
-
   .transaction-info,
   .referral-info {
     display: flex;
@@ -1762,7 +1779,7 @@ aside {
       width: 40%;
       justify-content: space-between;
 
-      >div {
+      > div {
         flex: 1;
         text-align: right;
       }
@@ -1860,7 +1877,7 @@ aside {
         border-bottom: 1px solid #eee;
       }
 
-      >div {
+      > div {
         width: 30%;
 
         @media #{$mobile} {
@@ -1988,7 +2005,7 @@ aside {
     @media #{$mobile} {
       flex-direction: column;
       align-items: flex-start;
-      border-bottom: 1px solid #DBDBE3;
+      border-bottom: 1px solid #dbdbe3;
       padding-bottom: 16px;
 
       .left,
@@ -2064,7 +2081,7 @@ select::-ms-expand {
       margin-bottom: 1rem;
 
       @media #{$mobile} {
-        font-size: 24px
+        font-size: 24px;
       }
     }
 
@@ -2086,7 +2103,7 @@ select::-ms-expand {
 
       @media #{$mobile} {
         justify-content: center;
-        background: #FFFFFF;
+        background: #ffffff;
         border-radius: 10px;
         padding: 16px 24px;
       }

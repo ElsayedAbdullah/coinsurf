@@ -497,6 +497,7 @@ aside .page-title p {
   .overview #requestPayout .top .payout-amount {
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 .overview #requestPayout .top .amount .amount-val {
@@ -504,15 +505,44 @@ aside .page-title p {
   border: 1px solid rgba(66, 99, 246, 0.48838);
   border-radius: 9px;
   padding: 12px 20px;
+  margin-right: 1.6rem;
+  display: flex;
+  align-items: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 2.3rem;
-  color: #4263f6;
-  display: inline-block;
-  margin-right: 1.6rem;
 }
 .overview #requestPayout .top .amount .amount-val .usd {
   color: #20244f;
+  margin-right: 5px;
+}
+.overview #requestPayout .top .amount .amount-val .amount-input {
+  border: 0;
+  font-weight: 700;
+  color: #4263f6;
+  outline: none;
+  background: none;
+  max-width: 70px;
+}
+.overview #requestPayout .top .amount .amount-val .amount-input::-moz-placeholder {
+  color: #5f638f;
+  opacity: 0.4;
+}
+.overview #requestPayout .top .amount .amount-val .amount-input:-ms-input-placeholder {
+  color: #5f638f;
+  opacity: 0.4;
+}
+.overview #requestPayout .top .amount .amount-val .amount-input::placeholder {
+  color: #5f638f;
+  opacity: 0.4;
+}
+.overview #requestPayout .top .amount .amount-val input[type=number]::-webkit-inner-spin-button,
+.overview #requestPayout .top .amount .amount-val input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.overview #requestPayout .top .amount .amount-val input[type=number] {
+  -moz-appearance: textfield;
 }
 .overview #requestPayout .top .remaining-balance p {
   font-weight: 400;
@@ -539,7 +569,7 @@ aside .page-title p {
   border-radius: 9px;
   background: #ffffff;
   border: 1px solid #dddde1;
-  padding: 1.6rem;
+  padding: 1.6rem 48px 1.6em 1.6em;
   display: block;
   cursor: pointer;
 }
@@ -569,6 +599,7 @@ aside .page-title p {
   line-height: 2.1rem;
   color: #20244f;
   opacity: 0.5;
+  word-break: break-word;
 }
 
 .modal.show .modal-dialog {
@@ -1251,7 +1282,7 @@ aside .page-title p {
 @media (max-width: 767px) {
   .download-apps .app-tutorials .app-name {
     text-align: left;
-    background: #DBDDEF;
+    background: #dbddef;
     border: 1.13333px solid rgba(186, 189, 222, 0.348027);
     border-radius: 10px;
     position: static;
@@ -1371,8 +1402,8 @@ aside .page-title p {
 }
 @media (max-width: 767px) {
   .device-management .devices .device {
-    background: #FFFFFF;
-    border: 1.13333px solid #DDDDE1;
+    background: #ffffff;
+    border: 1.13333px solid #dddde1;
     border-radius: 10px;
     padding: 16px;
   }
@@ -1453,7 +1484,7 @@ aside .page-title p {
     width: 100%;
     text-align: left;
     padding-top: 16px;
-    border-top: 1px solid #E3E3E3;
+    border-top: 1px solid #e3e3e3;
     margin-top: 16px;
     font-size: 26px;
   }
@@ -1818,7 +1849,7 @@ aside .page-title p {
 .referrals-history .referral-info {
     flex-direction: column;
     align-items: flex-start;
-    border-bottom: 1px solid #DBDBE3;
+    border-bottom: 1px solid #dbdbe3;
     padding-bottom: 16px;
   }
   .transaction-history .transaction-info .left,
@@ -1920,7 +1951,7 @@ select::-ms-expand {
 @media (max-width: 767px) {
   .contactus .top .social-icons {
     justify-content: center;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 10px;
     padding: 16px 24px;
   }

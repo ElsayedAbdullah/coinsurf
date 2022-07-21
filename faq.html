@@ -93,7 +93,7 @@
                     <path d="M9.125 16.25C13.06 16.25 16.25 13.06 16.25 9.125C16.25 5.18997 13.06 2 9.125 2C5.18997 2 2 5.18997 2 9.125C2 13.06 5.18997 16.25 9.125 16.25Z" stroke="#20244F" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </div>
-                <input type="search" placeholder="Search" />
+                <input type="search" placeholder="Search" id="accordion_search_bar" />
               </div>
             </div>
           </div>
@@ -103,8 +103,8 @@
 
     <div class="coniserf-faq pb-5">
       <div class="container">
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
+        <div class="accordion" id="accordionFaq">
+          <div class="accordion-item" id="collapseOne_container">
             <h2 class="accordion-header" id="flush-headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                 <span class="icon me-2 me-lg-3">
@@ -115,11 +115,11 @@
                 What is CoinSurf and how does it work?
               </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionExample">
+            <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFaq">
               <div class="accordion-body">CoinSurf is a passive income platform which allows you to earn while leaving the CoinSurf application running in the background.</div>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item" id="collapseTwo_container">
             <h2 class="accordion-header" id="flush-headingTwo">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                 <span class="icon me-2 me-lg-3">
@@ -130,11 +130,11 @@
                 Is there a limit to how much I can earn with CoinSurf?
               </button>
             </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionExample">
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFaq">
               <div class="accordion-body">Absolutely not! You can earn as much money as you want with CoinSurf. As long as your devices are consistently available to share your unused internet and there is demand for network access in your region, you will be able to earn income.</div>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item" id="collapseThree_container">
             <h2 class="accordion-header" id="flush-headingThree">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                 <span class="icon me-2 me-lg-3">
@@ -145,11 +145,11 @@
                 Will I earn more if I connect multiple devices in one home?
               </button>
             </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionExample">
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFaq">
               <div class="accordion-body">Not neccessarily. By connecting with multiple devices in the same network, you will have redundancy incase one of your devices goes offline and you want to make sure you are still connected to CoinSurf. However, you can only earn from 1 IP through 1 device at any given moment.</div>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item" id="collapseFour_container">
             <h2 class="accordion-header" id="flush-headingFour">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                 <span class="icon me-2 me-lg-3">
@@ -161,7 +161,7 @@
                 Does CoinSurf have a mobile application?
               </button>
             </h2>
-            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionExample">
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFaq">
               <div class="accordion-body">We are working on an Android application which we hope to launch before Q4 of 2022. However due to development limitations with Apple devices, we do not have any plans to release an iOS or iPadOS application in the near future.</div>
             </div>
           </div>
@@ -262,7 +262,6 @@
                   <li><a href="#">Japan</a></li>
                   <li><a href="#">Germany</a></li>
                   <li><a href="#">India</a></li>
-                  <li></li>
                 </ul>
               </div>
             </div>
@@ -273,12 +272,12 @@
 
           <ul class="social-icons mb-4 mb-md-0">
             <li>
-              <a href="#">
+              <a href="http://twitter.com/coinsurf_com" target="_blank">
                 <img width="21" height="18" class="img-fluid" src="imgs/homepage/twitter.svg" alt="twitter" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://discord.gg/SxHGvnBg2U" target="_blank">
                 <img width="26" height="20" class="img-fluid" src="imgs/homepage/discord.svg" alt="discord" />
               </a>
             </li>

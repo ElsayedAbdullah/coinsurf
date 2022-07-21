@@ -613,6 +613,17 @@ footer .copyright {
   border-top: 1px solid #333052;
   padding-top: 15px;
 }
+@media (max-width: 991px) {
+  footer .copyright {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  footer .copyright {
+    font-size: 12px;
+    text-align: center;
+  }
+}
 footer .copyright p {
   font-size: 14px;
   line-height: 16px;
@@ -623,8 +634,9 @@ footer .copyright p {
     font-weight: 500;
   }
 }
-footer .copyright .social-icons li {
-  display: inline-block;
+footer .copyright .social-icons {
+  display: flex;
+  align-items: center;
 }
 footer .copyright .social-icons li a {
   transition: 0.2s;
@@ -635,16 +647,6 @@ footer .copyright .social-icons li a:hover {
 }
 footer .copyright .social-icons li:not(:last-child) {
   margin-right: 24px;
-}
-@media (max-width: 991px) {
-  footer .copyright {
-    margin-top: 0;
-  }
-}
-@media (max-width: 767px) {
-  footer .copyright {
-    font-size: 12px;
-  }
 }
 
 .coinsurf-login {

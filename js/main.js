@@ -128,4 +128,13 @@ $(document).ready(function () {
       $(this).removeClass('invalid')
     }
   })
+
+  // Search Function on FAQ Page
+  $("#accordion_search_bar").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#accordionFaq > .accordion-item").filter(function () {
+      $(this)
+        .toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
 });
